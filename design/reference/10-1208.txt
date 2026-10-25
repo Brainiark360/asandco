@@ -1,0 +1,82 @@
+const imgMomentumAperture = "https://www.figma.com/api/mcp/asset/49a3d832-8c40-476f-8851-21b1e6af2715.svg";
+const imgMenu = "https://www.figma.com/api/mcp/asset/94d18398-6285-418a-9e41-602ce5697111.svg";
+const imgMomentumAperture1 = "https://www.figma.com/api/mcp/asset/3c69df47-4db4-4de8-85ca-895258809766.svg";
+const imgArrow = "https://www.figma.com/api/mcp/asset/075c8c4a-c36e-4722-ad64-acce760d7054.svg";
+const imgMomentumAperture2 = "https://www.figma.com/api/mcp/asset/c567f2a4-3e22-4664-a24a-2574e312778b.svg";
+
+export default function ContactEnquirySentMobile() {
+  return (
+    <div className="bg-[var(--as-bg-chalk,#f5f3ec)] content-stretch flex flex-col gap-[var(--as-space-0,0px)] items-start p-[var(--as-space-0,0px)] relative size-full" data-node-id="10:1208" data-name="Contact / Enquiry sent / Mobile">
+      <div className="bg-[var(--as-bg-chalk,#f5f3ec)] content-stretch cursor-pointer flex gap-[var(--as-space-32,32px)] h-[88px] items-center justify-between px-[var(--as-space-24,24px)] py-[var(--as-space-20,20px)] relative shrink-0 w-[390px]" data-node-id="10:1209" data-name="AS / Navigation">
+        <a className="content-stretch flex gap-[var(--as-space-12,9.96px)] items-center relative shrink-0" data-node-id="I10:1209;8:67" data-name="AS / Logo">
+          <div className="relative shrink-0 size-[31.54px]" data-node-id="I10:1209;8:67;7:19" data-name="Momentum aperture">
+            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgMomentumAperture} />
+          </div>
+          <div className="[word-break:break-word] font-['Space_Grotesk:Medium'] font-medium leading-[0] relative shrink-0 text-[17.43px] text-[color:var(--as-text-primary,#142443)] text-left tracking-[-0.6px] w-[136.12px]" data-node-id="I10:1209;8:67;7:21">
+            <p className="leading-[16.6px] mb-0">alexander</p>
+            <p className="leading-[16.6px]">{`stephen & co.`}</p>
+          </div>
+        </a>
+        <a className="bg-[var(--as-bg-chalk,#f5f3ec)] content-stretch flex flex-col gap-[var(--as-space-0,0px)] items-start p-[var(--as-space-12,12px)] relative shrink-0 size-[44px]" data-node-id="I10:1209;8:71" data-name="Menu button">
+          <div className="relative shrink-0 size-[20px]" data-node-id="I10:1209;8:72" data-name="Menu">
+            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgMenu} />
+          </div>
+        </a>
+      </div>
+      <div className="bg-[var(--as-bg-chalk,#f5f3ec)] content-stretch flex flex-col gap-[var(--as-space-32,32px)] items-start p-[var(--as-space-24,24px)] relative shrink-0 w-[390px]" data-node-id="10:1217" data-name="Success confirmation">
+        <div className="content-stretch flex gap-[var(--as-space-12,22.5px)] items-center relative shrink-0" data-node-id="10:1218" data-name="AS / Logo">
+          <div className="relative shrink-0 size-[120px]" data-node-id="I10:1218;7:33" data-name="Momentum aperture">
+            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgMomentumAperture1} />
+          </div>
+        </div>
+        <p className="[word-break:break-word] font-['IBM_Plex_Mono:Regular'] leading-[18px] not-italic relative shrink-0 text-[12px] text-[color:var(--as-brand-cobalt,#244bff)] tracking-[0.5px] w-[342px]" data-node-id="10:1221">
+          ENQUIRY RECEIVED
+        </p>
+        <div className="[word-break:break-word] font-['Space_Grotesk:Medium'] font-medium leading-[0] relative shrink-0 text-[50px] text-[color:var(--as-text-primary,#142443)] tracking-[-1.7px] w-[342px]" data-node-id="10:1222">
+          <p className="leading-[52px] mb-0">Thanks for</p>
+          <p className="leading-[52px]">starting the conversation.</p>
+        </div>
+        <p className="[word-break:break-word] font-['Manrope:Regular'] font-normal leading-[24px] relative shrink-0 text-[16px] text-[color:var(--as-text-secondary,#58647a)] w-[342px]" data-node-id="10:1223">
+          We’ll review what you’ve shared and get back to you to discuss the next step.
+        </p>
+        <a className="bg-[var(--as-brand-cobalt,#244bff)] content-stretch cursor-pointer flex gap-[var(--as-space-16,16px)] h-[52px] items-center justify-between px-[var(--as-space-24,24px)] py-[var(--as-space-16,16px)] relative shrink-0 w-[342px]" data-node-id="10:1224" data-name="AS / Button">
+          <p className="[word-break:break-word] font-['Manrope:SemiBold'] font-semibold leading-[20px] relative shrink-0 text-[16px] text-[color:var(--as-text-inverse,white)] text-left w-[156px]" data-node-id="I10:1224;8:3">
+            Back to home
+          </p>
+          <div className="relative shrink-0 size-[20px]" data-node-id="I10:1224;8:4" data-name="Arrow">
+            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow} />
+          </div>
+        </a>
+      </div>
+      <div className="bg-[var(--as-bg-dark,#142443)] content-stretch flex flex-col gap-[var(--as-space-40,40px)] h-[500px] items-start p-[var(--as-space-24,24px)] relative shrink-0 w-[390px]" data-node-id="10:1228" data-name="AS / Footer">
+        <div className="content-stretch flex flex-col gap-[var(--as-space-32,32px)] items-start p-[var(--as-space-0,0px)] relative shrink-0 w-[342px]" data-node-id="I10:1228;8:176" data-name="Footer top">
+          <a className="content-stretch cursor-pointer flex gap-[var(--as-space-16,16px)] items-center relative shrink-0" data-node-id="I10:1228;8:177" data-name="AS / Logo">
+            <div className="relative shrink-0 size-[56px]" data-node-id="I10:1228;8:177;7:11" data-name="Momentum aperture">
+              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgMomentumAperture2} />
+            </div>
+            <div className="[word-break:break-word] font-['Space_Grotesk:Medium'] font-medium leading-[0] relative shrink-0 text-[32px] text-[color:var(--as-text-inverse,white)] text-left tracking-[-1px] w-[236px]" data-node-id="I10:1228;8:177;7:13">
+              <p className="leading-[30px] mb-0">alexander</p>
+              <p className="leading-[30px]">{`stephen & co.`}</p>
+            </div>
+          </a>
+          <div className="[word-break:break-word] content-stretch flex flex-col gap-[var(--as-space-16,16px)] items-start p-[var(--as-space-0,0px)] relative shrink-0 w-[342px]" data-node-id="I10:1228;8:181" data-name="Footer proposition">
+            <p className="font-['Space_Grotesk:Medium'] font-medium leading-[30px] relative shrink-0 text-[24px] text-[color:var(--as-text-inverse,white)] tracking-[-0.4px] w-[342px]" data-node-id="I10:1228;8:182">
+              Clarity that creates momentum.
+            </p>
+            <p className="font-['Manrope:Regular'] font-normal leading-[24px] relative shrink-0 text-[16px] text-[color:var(--as-text-inverse-secondary,#b8c5df)] w-[342px]" data-node-id="I10:1228;8:183">
+              Strategy, marketing and digital systems for ambitious businesses.
+            </p>
+          </div>
+          <div className="[word-break:break-word] content-stretch flex flex-col gap-[var(--as-space-12,12px)] items-start p-[var(--as-space-0,0px)] relative shrink-0 text-[color:var(--as-text-inverse,white)] w-[342px]" data-node-id="I10:1228;8:184" data-name="Footer links">
+            <p className="font-['Manrope:Regular'] font-normal leading-[21px] relative shrink-0 text-[14px] w-[342px] whitespace-pre-wrap" data-node-id="I10:1228;8:185">{`About   /   Services   /   Approach`}</p>
+            <a className="block cursor-pointer font-['Manrope:SemiBold'] font-semibold leading-[0] relative shrink-0 text-[16px] w-[342px]" data-node-id="I10:1228;8:186">
+              <p className="leading-[20px]">Start a conversation</p>
+            </a>
+          </div>
+        </div>
+        <div className="bg-[var(--as-border-inverse,#58647a)] h-px relative shrink-0 w-[342px]" data-node-id="I10:1228;8:187" data-name="Divider" />
+        <p className="[word-break:break-word] font-['Manrope:Regular'] font-normal leading-[21px] relative shrink-0 text-[14px] text-[color:var(--as-text-inverse-secondary,#b8c5df)] w-[342px]" data-node-id="I10:1228;8:188">{`© Alexander Stephen & Co.`}</p>
+      </div>
+    </div>
+  );
+}

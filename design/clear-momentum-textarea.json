@@ -1,0 +1,57 @@
+{
+  "createdNodeIds": [
+    "13:120",
+    "13:110",
+    "13:111",
+    "13:112",
+    "13:113",
+    "13:114",
+    "13:115",
+    "13:116",
+    "13:117",
+    "13:118",
+    "13:119",
+    "13:249",
+    "I13:249;13:116",
+    "I13:249;13:117",
+    "I13:249;13:118",
+    "I13:249;13:119"
+  ],
+  "mutatedNodeIds": [
+    "8:75",
+    "8:132",
+    "8:51",
+    "8:22",
+    "8:38",
+    "8:195"
+  ],
+  "textareaId": "13:120",
+  "variants": [
+    {
+      "id": "13:110",
+      "name": "Device=Desktop",
+      "height": 210
+    },
+    {
+      "id": "13:115",
+      "name": "Device=Mobile",
+      "height": 210
+    }
+  ],
+  "props": {
+    "Label": "Label#13:0",
+    "Placeholder": "Placeholder#13:3",
+    "Help": "Help#13:6"
+  },
+  "review": {
+    "id": "8:195",
+    "name": "Website components / Review",
+    "width": 1800,
+    "height": 2380,
+    "nodes": 133,
+    "texts": 55,
+    "instances": 25,
+    "images": 0,
+    "overflows": []
+  }
+}

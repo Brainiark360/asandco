@@ -1,63 +1,33 @@
-// src/app/layout.tsx - UPDATED
-import type { Metadata } from 'next';
-import { Inter, Playfair_Display } from 'next/font/google';
-import './globals.css';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import type { Metadata } from "next";
+import { IBM_Plex_Mono, Manrope, Space_Grotesk } from "next/font/google";
+import Navigation from "../components/Navigation";
+import Footer from "../components/Footer";
+import MotionExperience from "../components/MotionExperience";
+import "./globals.css";
 
-
-const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-inter',
-  display: 'swap',
-});
-
-const playfair = Playfair_Display({
-  subsets: ['latin'],
-  variable: '--font-playfair',
-  display: 'swap',
-});
+const display = Space_Grotesk({ subsets: ["latin"], weight: "500", variable: "--font-display", display: "swap" });
+const body = Manrope({ subsets: ["latin"], variable: "--font-body", display: "swap" });
+const mono = IBM_Plex_Mono({ subsets: ["latin"], weight: "400", variable: "--font-mono", display: "swap" });
 
 export const metadata: Metadata = {
-  title: 'Alexander Stephen & Co. | Strategy-Led Marketing Consultancy',
-  description: 'A strategy-first consultancy and digital marketing firm helping businesses grow through clarity, systems, and disciplined execution.',
-  keywords: ['strategy-led marketing', 'growth consultancy', 'digital systems', 'marketing strategy firm', 'business growth'],
-  authors: [{ name: 'Alexander Stephen & Co.' }],
+  title: { default: "Alexander Stephen & Co. | Clear thinking. Real momentum.", template: "%s | Alexander Stephen & Co." },
+  description: "Strategy, branding, social media management, digital marketing and creative production for ambitious businesses. Make your next move count.",
   openGraph: {
-    type: 'website',
-    locale: 'en_US',
-    title: 'Alexander Stephen & Co.',
-    description: 'Strategy-Led Marketing and Digital Systems for Structured Business Growth',
-  },
-  robots: {
-    index: true,
-    follow: true,
+    title: "Alexander Stephen & Co.",
+    description: "Clear thinking. Real momentum. Strategy, branding, social media, digital delivery and creative production.",
+    type: "website",
   },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
-      <body className="bg-white text-gray-900 antialiased selection:bg-gray-900 selection:text-white">
-        <div className="fixed inset-0 pointer-events-none">
-          {/* Structural grid overlay - subtle visual anchor */}
-          <div className="absolute inset-0" style={{
-            backgroundImage: `linear-gradient(to right, rgba(0,0,0,0.02) 1px, transparent 1px),
-                            linear-gradient(to bottom, rgba(0,0,0,0.02) 1px, transparent 1px)`,
-            backgroundSize: '64px 64px',
-            maskImage: 'radial-gradient(circle at 50% 50%, black 20%, transparent 80%)',
-            WebkitMaskImage: 'radial-gradient(circle at 50% 50%, black 20%, transparent 80%)',
-          }} />
-        </div>
+    <html lang="en" className={display.variable + " " + body.variable + " " + mono.variable}>
+      <body>
+        <a href="#main-content" className="skip-link">Skip to content</a>
         <Navigation />
-        <main className="relative z-10">
-          {children}
-        </main>
+        <main id="main-content" tabIndex={-1}>{children}</main>
         <Footer />
+        <MotionExperience />
       </body>
     </html>
   );

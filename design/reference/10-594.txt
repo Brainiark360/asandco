@@ -1,0 +1,114 @@
+const imgArrow = "https://www.figma.com/api/mcp/asset/6ab6e03a-40c9-4498-8868-d8af875761a1.svg";
+const imgMomentumAperture = "https://www.figma.com/api/mcp/asset/3cf2790a-84cb-4312-8c83-348ba00651d4.svg";
+const imgMomentumAperture1 = "https://www.figma.com/api/mcp/asset/5a5bb668-aba8-4873-88bf-938f92f1f99b.svg";
+const imgMomentumAperture2 = "https://www.figma.com/api/mcp/asset/512d1296-9f6a-4c4f-8790-42ed6d5d0349.svg";
+
+type AsButtonProps = {
+  className?: string;
+  label?: string;
+  state?: "Default";
+  style?: "Primary";
+};
+
+function AsButton({ className, label = "Start a conversation", state = "Default", style = "Primary" }: AsButtonProps) {
+  return (
+    <div className={className || "bg-[var(--as-brand-cobalt,#244bff)] content-stretch flex gap-[var(--as-space-16,16px)] h-[52px] items-center px-[var(--as-space-24,24px)] py-[var(--as-space-16,16px)] relative w-[240px]"} data-node-id="8:2">
+      <p className="[word-break:break-word] font-['Manrope:SemiBold'] font-semibold leading-[20px] relative shrink-0 text-[16px] text-[color:var(--as-text-inverse,white)] w-[156px]" data-node-id="8:3">
+        {label}
+      </p>
+      <div className="relative shrink-0 size-[20px]" data-node-id="8:4" data-name="Arrow">
+        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow} />
+      </div>
+    </div>
+  );
+}
+
+export default function ContactEnquirySentDesktop() {
+  return (
+    <div className="bg-[var(--as-bg-chalk,#f5f3ec)] content-stretch flex flex-col gap-[var(--as-space-0,0px)] items-start p-[var(--as-space-0,0px)] relative size-full" data-node-id="10:594" data-name="Contact / Enquiry sent / Desktop">
+      <div className="bg-[var(--as-bg-chalk,#f5f3ec)] content-stretch cursor-pointer flex gap-[var(--as-space-32,32px)] h-[100px] items-center justify-between px-[var(--as-space-64,64px)] py-[var(--as-space-20,20px)] relative shrink-0 w-[1440px]" data-node-id="10:595" data-name="AS / Navigation">
+        <a className="content-stretch flex gap-[var(--as-space-12,12px)] items-center relative shrink-0" data-node-id="I10:595;8:52" data-name="AS / Logo">
+          <div className="relative shrink-0 size-[38px]" data-node-id="I10:595;8:52;7:19" data-name="Momentum aperture">
+            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgMomentumAperture} />
+          </div>
+          <div className="[word-break:break-word] font-['Space_Grotesk:Medium'] font-medium leading-[0] relative shrink-0 text-[21px] text-[color:var(--as-text-primary,#142443)] text-left tracking-[-0.6px] w-[164px]" data-node-id="I10:595;8:52;7:21">
+            <p className="leading-[20px] mb-0">alexander</p>
+            <p className="leading-[20px]">{`stephen & co.`}</p>
+          </div>
+        </a>
+        <div className="[word-break:break-word] content-stretch flex font-['Manrope:SemiBold'] font-semibold gap-[var(--as-space-24,24px)] items-center leading-[0] p-[var(--as-space-0,0px)] relative shrink-0 text-[14px] w-[510px]" data-node-id="I10:595;8:56" data-name="Nav links">
+          <a className="block relative shrink-0 text-[color:var(--as-text-primary,#142443)] w-[66px]" data-node-id="I10:595;8:57">
+            <p className="leading-[20px]">Home</p>
+          </a>
+          <a className="block relative shrink-0 text-[color:var(--as-text-primary,#142443)] w-[66px]" data-node-id="I10:595;8:58">
+            <p className="leading-[20px]">About</p>
+          </a>
+          <a className="block relative shrink-0 text-[color:var(--as-text-primary,#142443)] w-[76px]" data-node-id="I10:595;8:59">
+            <p className="leading-[20px]">Services</p>
+          </a>
+          <a className="block relative shrink-0 text-[color:var(--as-text-primary,#142443)] w-[82px]" data-node-id="I10:595;8:60">
+            <p className="leading-[20px]">Approach</p>
+          </a>
+          <a className="block relative shrink-0 text-[color:var(--as-brand-cobalt,#244bff)] w-[66px]" data-node-id="I10:595;8:61">
+            <p className="leading-[20px]">Contact</p>
+          </a>
+        </div>
+        <a className="bg-[var(--as-brand-cobalt,#244bff)] content-stretch flex gap-[var(--as-space-16,16px)] h-[52px] items-center px-[var(--as-space-24,24px)] py-[var(--as-space-16,16px)] relative shrink-0 w-[240px]" data-node-id="I10:595;8:62" data-name="AS / Button">
+          <p className="[word-break:break-word] font-['Manrope:SemiBold'] font-semibold leading-[20px] relative shrink-0 text-[16px] text-[color:var(--as-text-inverse,white)] text-left w-[156px]" data-node-id="I10:595;8:62;8:3">
+            Start a conversation
+          </p>
+          <div className="relative shrink-0 size-[20px]" data-node-id="I10:595;8:62;8:4" data-name="Arrow">
+            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow} />
+          </div>
+        </a>
+      </div>
+      <div className="bg-[var(--as-bg-chalk,#f5f3ec)] content-stretch flex flex-col gap-[var(--as-space-32,32px)] items-start p-[var(--as-space-72,72px)] relative shrink-0 w-[1440px]" data-node-id="10:610" data-name="Success confirmation">
+        <div className="content-stretch flex gap-[var(--as-space-12,33.75px)] items-center relative shrink-0" data-node-id="10:611" data-name="AS / Logo">
+          <div className="relative shrink-0 size-[180px]" data-node-id="I10:611;7:33" data-name="Momentum aperture">
+            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgMomentumAperture1} />
+          </div>
+        </div>
+        <p className="[word-break:break-word] font-['IBM_Plex_Mono:Regular'] leading-[18px] not-italic relative shrink-0 text-[12px] text-[color:var(--as-brand-cobalt,#244bff)] tracking-[0.5px] w-[1296px]" data-node-id="10:614">
+          ENQUIRY RECEIVED
+        </p>
+        <div className="[word-break:break-word] font-['Space_Grotesk:Medium'] font-medium leading-[0] relative shrink-0 text-[72px] text-[color:var(--as-text-primary,#142443)] tracking-[-2.2px] w-[1296px]" data-node-id="10:615">
+          <p className="leading-[76px] mb-0">Thanks for</p>
+          <p className="leading-[76px]">starting the conversation.</p>
+        </div>
+        <p className="[word-break:break-word] font-['Manrope:Regular'] font-normal leading-[28px] relative shrink-0 text-[18px] text-[color:var(--as-text-secondary,#58647a)] w-[760px]" data-node-id="10:616">
+          We’ll review what you’ve shared and get back to you to discuss the next step.
+        </p>
+        <AsButton className="bg-[var(--as-brand-cobalt,#244bff)] content-stretch cursor-pointer flex gap-[var(--as-space-16,16px)] h-[52px] items-center px-[var(--as-space-24,24px)] py-[var(--as-space-16,16px)] relative shrink-0 w-[240px]" label="Back to home" />
+      </div>
+      <div className="bg-[var(--as-bg-dark,#142443)] content-stretch flex flex-col gap-[var(--as-space-40,40px)] h-[330px] items-start p-[var(--as-space-64,64px)] relative shrink-0 w-[1440px]" data-node-id="10:621" data-name="AS / Footer">
+        <div className="content-stretch flex gap-[var(--as-space-96,96px)] items-start p-[var(--as-space-0,0px)] relative shrink-0 w-[1312px]" data-node-id="I10:621;8:119" data-name="Footer top">
+          <a className="content-stretch cursor-pointer flex gap-[var(--as-space-16,16px)] items-center relative shrink-0" data-node-id="I10:621;8:120" data-name="AS / Logo">
+            <div className="relative shrink-0 size-[56px]" data-node-id="I10:621;8:120;7:11" data-name="Momentum aperture">
+              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgMomentumAperture2} />
+            </div>
+            <div className="[word-break:break-word] font-['Space_Grotesk:Medium'] font-medium leading-[0] relative shrink-0 text-[32px] text-[color:var(--as-text-inverse,white)] text-left tracking-[-1px] w-[236px]" data-node-id="I10:621;8:120;7:13">
+              <p className="leading-[30px] mb-0">alexander</p>
+              <p className="leading-[30px]">{`stephen & co.`}</p>
+            </div>
+          </a>
+          <div className="[word-break:break-word] content-stretch flex flex-col gap-[var(--as-space-16,16px)] items-start p-[var(--as-space-0,0px)] relative shrink-0 w-[420px]" data-node-id="I10:621;8:124" data-name="Footer proposition">
+            <p className="font-['Space_Grotesk:Medium'] font-medium leading-[30px] relative shrink-0 text-[24px] text-[color:var(--as-text-inverse,white)] tracking-[-0.4px] w-[420px]" data-node-id="I10:621;8:125">
+              Clarity that creates momentum.
+            </p>
+            <p className="font-['Manrope:Regular'] font-normal leading-[24px] relative shrink-0 text-[16px] text-[color:var(--as-text-inverse-secondary,#b8c5df)] w-[420px]" data-node-id="I10:621;8:126">
+              Strategy, marketing and digital systems for ambitious businesses.
+            </p>
+          </div>
+          <div className="[word-break:break-word] content-stretch flex flex-col gap-[var(--as-space-12,12px)] items-start p-[var(--as-space-0,0px)] relative shrink-0 text-[color:var(--as-text-inverse,white)] w-[360px]" data-node-id="I10:621;8:127" data-name="Footer links">
+            <p className="font-['Manrope:Regular'] font-normal leading-[21px] relative shrink-0 text-[14px] w-[360px] whitespace-pre-wrap" data-node-id="I10:621;8:128">{`About   /   Services   /   Approach`}</p>
+            <a className="block cursor-pointer font-['Manrope:SemiBold'] font-semibold leading-[0] relative shrink-0 text-[16px] w-[360px]" data-node-id="I10:621;8:129">
+              <p className="leading-[20px]">Start a conversation</p>
+            </a>
+          </div>
+        </div>
+        <div className="bg-[var(--as-border-inverse,#58647a)] h-px relative shrink-0 w-[1312px]" data-node-id="I10:621;8:130" data-name="Divider" />
+        <p className="[word-break:break-word] font-['Manrope:Regular'] font-normal leading-[21px] relative shrink-0 text-[14px] text-[color:var(--as-text-inverse-secondary,#b8c5df)] w-[1312px]" data-node-id="I10:621;8:131">{`© Alexander Stephen & Co.`}</p>
+      </div>
+    </div>
+  );
+}

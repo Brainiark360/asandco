@@ -1,0 +1,23 @@
+{
+  "runId": "clear-momentum-v1",
+  "fileKey": "jl4MtQR9H7ZDWewqWJiOu9",
+  "sessionId": "a2987c3e-8a05-4bb2-9977-8e3189c36b95",
+  "scope": "Brand foundations and website mockups",
+  "inventory": {
+    "identity": ["Logo suite", "Colour roles and contrast", "Typography scale", "Graphic rules"],
+    "components": ["Logo", "Button", "Navigation", "Service card", "Process card", "Project placeholder", "Input", "FAQ row"],
+    "screens": ["Home", "About", "Services", "Approach", "Contact"],
+    "viewports": [1440, 390]
+  },
+  "discovery": {
+    "codeConnect": "No Code Connect files in source",
+    "existingFigma": "Three editorial exploration boards; no local variables, styles or components",
+    "libraries": "Simple Design System buttons and inputs found; incompatible visual/token model with approved custom identity",
+    "decision": "Build a focused local identity and component set, preserving the original exploration page",
+    "sourceOfTruth": "Approved Clear Momentum direction supersedes original code visual styling"
+  },
+  "entities": {},
+  "completedSteps": ["discovery", "foundations", "logo and identity guidelines", "responsive components", "five desktop pages", "five mobile pages", "menu and confirmation states", "prototype links", "visual and structural QA"],
+  "pendingValidations": [],
+  "phaseLedgers": ["clear-momentum-foundations.json", "clear-momentum-identity.json", "clear-momentum-components.json", "clear-momentum-textarea.json", "clear-momentum-desktop.json", "clear-momentum-mobile.json", "clear-momentum-desktop-qa.json", "clear-momentum-mobile-qa.json", "clear-momentum-final-qa.json"]
+}

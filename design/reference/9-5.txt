@@ -1,0 +1,257 @@
+const imgArrow = "https://www.figma.com/api/mcp/asset/f73c8bf1-5a56-425b-8bf2-cd0ea048befa.svg";
+const imgExpand = "https://www.figma.com/api/mcp/asset/6958b890-f82e-489f-8431-6b210b30e9b2.svg";
+const imgMomentumAperture = "https://www.figma.com/api/mcp/asset/32b95132-e0ee-4972-a4ed-6caebd993f0e.svg";
+const imgMomentumAperture1 = "https://www.figma.com/api/mcp/asset/de9cbb22-7357-4a4b-abdf-695671556f2b.svg";
+
+type AsButtonProps = {
+  className?: string;
+  label?: string;
+  state?: "Default";
+  style?: "Primary";
+};
+
+function AsButton({ className, label = "Start a conversation", state = "Default", style = "Primary" }: AsButtonProps) {
+  return (
+    <div className={className || "bg-[var(--as-brand-cobalt,#244bff)] content-stretch flex gap-[var(--as-space-16,16px)] h-[52px] items-center px-[var(--as-space-24,24px)] py-[var(--as-space-16,16px)] relative w-[240px]"} data-node-id="8:2">
+      <p className="[word-break:break-word] font-['Manrope:SemiBold'] font-semibold leading-[20px] relative shrink-0 text-[16px] text-[color:var(--as-text-inverse,white)] w-[156px]" data-node-id="8:3">
+        {label}
+      </p>
+      <div className="relative shrink-0 size-[20px]" data-node-id="8:4" data-name="Arrow">
+        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow} />
+      </div>
+    </div>
+  );
+}
+
+type AsFaqRowProps = {
+  className?: string;
+  device?: "Desktop";
+  question?: string;
+};
+
+function AsFaqRow({ className, device = "Desktop", question = "What does the first conversation involve?" }: AsFaqRowProps) {
+  return (
+    <div className={className || "bg-[var(--as-bg-chalk,#f5f3ec)] content-stretch flex gap-[var(--as-space-24,24px)] h-[76px] items-center p-[var(--as-space-24,24px)] relative w-[1296px]"} data-node-id="8:99">
+      <p className="[word-break:break-word] font-['Manrope:Regular'] font-normal leading-[30px] relative shrink-0 text-[20px] text-[color:var(--as-text-primary,#142443)] w-[1200px]" data-node-id="8:100">
+        {question}
+      </p>
+      <div className="relative shrink-0 size-[24px]" data-node-id="8:101" data-name="Expand">
+        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgExpand} />
+      </div>
+    </div>
+  );
+}
+
+export default function ApproachDesktop() {
+  return (
+    <div className="bg-[var(--as-bg-chalk,#f5f3ec)] content-stretch flex flex-col items-start relative size-full" data-node-id="9:5" data-name="Approach / Desktop">
+      <div className="bg-[var(--as-bg-chalk,#f5f3ec)] content-stretch flex gap-[var(--as-space-32,32px)] h-[100px] items-center justify-between px-[var(--as-space-64,64px)] py-[var(--as-space-20,20px)] relative shrink-0 w-[1440px]" data-node-id="10:415" data-name="AS / Navigation">
+        <a className="content-stretch cursor-pointer flex gap-[var(--as-space-12,12px)] items-center relative shrink-0" data-node-id="I10:415;8:52" data-name="AS / Logo">
+          <div className="relative shrink-0 size-[38px]" data-node-id="I10:415;8:52;7:19" data-name="Momentum aperture">
+            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgMomentumAperture} />
+          </div>
+          <div className="[word-break:break-word] font-['Space_Grotesk:Medium'] font-medium leading-[0] relative shrink-0 text-[21px] text-[color:var(--as-text-primary,#142443)] text-left tracking-[-0.6px] w-[164px]" data-node-id="I10:415;8:52;7:21">
+            <p className="leading-[20px] mb-0">alexander</p>
+            <p className="leading-[20px]">{`stephen & co.`}</p>
+          </div>
+        </a>
+        <div className="[word-break:break-word] content-stretch flex font-['Manrope:SemiBold'] font-semibold gap-[var(--as-space-24,24px)] items-center p-[var(--as-space-0,0px)] relative shrink-0 text-[14px] w-[510px]" data-node-id="I10:415;8:56" data-name="Nav links">
+          <a className="block cursor-pointer leading-[0] relative shrink-0 text-[color:var(--as-text-primary,#142443)] w-[66px]" data-node-id="I10:415;8:57">
+            <p className="leading-[20px]">Home</p>
+          </a>
+          <a className="block cursor-pointer leading-[0] relative shrink-0 text-[color:var(--as-text-primary,#142443)] w-[66px]" data-node-id="I10:415;8:58">
+            <p className="leading-[20px]">About</p>
+          </a>
+          <a className="block cursor-pointer leading-[0] relative shrink-0 text-[color:var(--as-text-primary,#142443)] w-[76px]" data-node-id="I10:415;8:59">
+            <p className="leading-[20px]">Services</p>
+          </a>
+          <p className="leading-[20px] relative shrink-0 text-[color:var(--as-brand-cobalt,#244bff)] w-[82px]" data-node-id="I10:415;8:60">
+            Approach
+          </p>
+          <a className="block cursor-pointer leading-[0] relative shrink-0 text-[color:var(--as-text-primary,#142443)] w-[66px]" data-node-id="I10:415;8:61">
+            <p className="leading-[20px]">Contact</p>
+          </a>
+        </div>
+        <a className="bg-[var(--as-brand-cobalt,#244bff)] content-stretch cursor-pointer flex gap-[var(--as-space-16,16px)] h-[52px] items-center px-[var(--as-space-24,24px)] py-[var(--as-space-16,16px)] relative shrink-0 w-[240px]" data-node-id="I10:415;8:62" data-name="AS / Button">
+          <p className="[word-break:break-word] font-['Manrope:SemiBold'] font-semibold leading-[20px] relative shrink-0 text-[16px] text-[color:var(--as-text-inverse,white)] text-left w-[156px]" data-node-id="I10:415;8:62;8:3">
+            Start a conversation
+          </p>
+          <div className="relative shrink-0 size-[20px]" data-node-id="I10:415;8:62;8:4" data-name="Arrow">
+            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow} />
+          </div>
+        </a>
+      </div>
+      <div className="[word-break:break-word] bg-[var(--as-brand-cobalt,#244bff)] content-stretch flex flex-col gap-[var(--as-space-32,32px)] items-start p-[var(--as-space-72,72px)] relative shrink-0 w-[1440px]" data-node-id="10:430" data-name="Page introduction">
+        <p className="font-['IBM_Plex_Mono:Regular'] leading-[18px] not-italic relative shrink-0 text-[12px] text-[color:var(--as-brand-amber,#ffce73)] tracking-[0.5px] w-[1296px]" data-node-id="10:431">
+          OUR APPROACH
+        </p>
+        <div className="font-['Space_Grotesk:Medium'] font-medium leading-[0] relative shrink-0 text-[72px] text-[color:var(--as-text-inverse,white)] tracking-[-2.2px] w-[1100px]" data-node-id="10:432">
+          <p className="leading-[76px] mb-0">A plan is only as good</p>
+          <p className="leading-[76px]">as what happens next.</p>
+        </div>
+        <p className="font-['Manrope:Regular'] font-normal leading-[28px] relative shrink-0 text-[18px] text-[color:var(--as-text-inverse-secondary,#b8c5df)] w-[840px]" data-node-id="10:433">
+          Strategy sets the direction. Systems make it possible. Execution turns it into progress.
+        </p>
+      </div>
+      <div
+        className="bg-[var(--as-bg-chalk,#f5f3ec)] content-stretch flex flex-col gap-[var(--as-space-32,32px)] items-start p-[var(--as-space-72,72px)] relative shrink-0 w-[1440px]"
+        data-node-id="10:434"
+        data-name="Start with
+the right questions."
+      >
+        <p className="[word-break:break-word] font-['IBM_Plex_Mono:Regular'] leading-[18px] not-italic relative shrink-0 text-[12px] text-[color:var(--as-brand-cobalt,#244bff)] tracking-[0.5px] w-[1296px]" data-node-id="10:435">
+          01 / STRATEGY
+        </p>
+        <div className="[word-break:break-word] font-['Space_Grotesk:Medium'] font-medium leading-[0] relative shrink-0 text-[52px] text-[color:var(--as-text-primary,#142443)] tracking-[-1.5px] w-[1296px]" data-node-id="10:436">
+          <p className="leading-[56px] mb-0">Start with</p>
+          <p className="leading-[56px]">the right questions.</p>
+        </div>
+        <p className="[word-break:break-word] font-['Manrope:Regular'] font-normal leading-[28px] relative shrink-0 text-[18px] text-[color:var(--as-text-secondary,#58647a)] w-[840px]" data-node-id="10:437">
+          We get clear on your business, audience and growth objective before choosing the work.
+        </p>
+        <div className="bg-[var(--as-border-default,#d5d9e1)] h-px relative shrink-0 w-[1296px]" data-node-id="10:438" data-name="Divider" />
+        <p className="[word-break:break-word] font-['IBM_Plex_Mono:Regular'] leading-[18px] not-italic relative shrink-0 text-[12px] text-[color:var(--as-text-primary,#142443)] tracking-[0.5px] w-[1296px]" data-node-id="10:439">
+          WHAT THIS PHASE PRODUCES
+        </p>
+        <p className="[word-break:break-word] font-['Space_Grotesk:Medium'] font-medium leading-[30px] relative shrink-0 text-[24px] text-[color:var(--as-text-primary,#142443)] tracking-[-0.4px] w-[1296px]" data-node-id="10:440">
+          Business and market understanding
+        </p>
+        <p className="[word-break:break-word] font-['Space_Grotesk:Medium'] font-medium leading-[30px] relative shrink-0 text-[24px] text-[color:var(--as-text-primary,#142443)] tracking-[-0.4px] w-[1296px]" data-node-id="10:441">
+          Positioning and priority setting
+        </p>
+        <p className="[word-break:break-word] font-['Space_Grotesk:Medium'] font-medium leading-[30px] relative shrink-0 text-[24px] text-[color:var(--as-text-primary,#142443)] tracking-[-0.4px] w-[1296px]" data-node-id="10:442">
+          A focused growth roadmap
+        </p>
+      </div>
+      <div
+        className="bg-[var(--as-bg-tint,#e8edff)] content-stretch flex flex-col gap-[var(--as-space-32,32px)] items-start p-[var(--as-space-72,72px)] relative shrink-0 w-[1440px]"
+        data-node-id="10:443"
+        data-name="Build the foundations
+for the plan."
+      >
+        <p className="[word-break:break-word] font-['IBM_Plex_Mono:Regular'] leading-[18px] not-italic relative shrink-0 text-[12px] text-[color:var(--as-brand-cobalt,#244bff)] tracking-[0.5px] w-[1296px]" data-node-id="10:444">
+          02 / SYSTEMS
+        </p>
+        <div className="[word-break:break-word] font-['Space_Grotesk:Medium'] font-medium leading-[0] relative shrink-0 text-[52px] text-[color:var(--as-text-primary,#142443)] tracking-[-1.5px] w-[1296px]" data-node-id="10:445">
+          <p className="leading-[56px] mb-0">Build the foundations</p>
+          <p className="leading-[56px]">for the plan.</p>
+        </div>
+        <p className="[word-break:break-word] font-['Manrope:Regular'] font-normal leading-[28px] relative shrink-0 text-[18px] text-[color:var(--as-text-secondary,#58647a)] w-[840px]" data-node-id="10:446">
+          We design the tools, journeys and ways of working that make coordinated delivery possible.
+        </p>
+        <div className="bg-[var(--as-border-default,#d5d9e1)] h-px relative shrink-0 w-[1296px]" data-node-id="10:447" data-name="Divider" />
+        <p className="[word-break:break-word] font-['IBM_Plex_Mono:Regular'] leading-[18px] not-italic relative shrink-0 text-[12px] text-[color:var(--as-text-primary,#142443)] tracking-[0.5px] w-[1296px]" data-node-id="10:448">
+          WHAT THIS PHASE PRODUCES
+        </p>
+        <p className="[word-break:break-word] font-['Space_Grotesk:Medium'] font-medium leading-[30px] relative shrink-0 text-[24px] text-[color:var(--as-text-primary,#142443)] tracking-[-0.4px] w-[1296px]" data-node-id="10:449">
+          Digital customer journeys
+        </p>
+        <p className="[word-break:break-word] font-['Space_Grotesk:Medium'] font-medium leading-[30px] relative shrink-0 text-[24px] text-[color:var(--as-text-primary,#142443)] tracking-[-0.4px] w-[1296px]" data-node-id="10:450">
+          Websites, CRM and workflows
+        </p>
+        <p className="[word-break:break-word] font-['Space_Grotesk:Medium'] font-medium leading-[30px] relative shrink-0 text-[24px] text-[color:var(--as-text-primary,#142443)] tracking-[-0.4px] w-[1296px]" data-node-id="10:451">
+          Measurement and reporting foundations
+        </p>
+      </div>
+      <div
+        className="bg-[var(--as-bg-chalk,#f5f3ec)] content-stretch flex flex-col gap-[var(--as-space-32,32px)] items-start p-[var(--as-space-72,72px)] relative shrink-0 w-[1440px]"
+        data-node-id="10:452"
+        data-name="Make progress.
+Then make it better."
+      >
+        <p className="[word-break:break-word] font-['IBM_Plex_Mono:Regular'] leading-[18px] not-italic relative shrink-0 text-[12px] text-[color:var(--as-brand-cobalt,#244bff)] tracking-[0.5px] w-[1296px]" data-node-id="10:453">
+          03 / EXECUTION
+        </p>
+        <div className="[word-break:break-word] font-['Space_Grotesk:Medium'] font-medium leading-[0] relative shrink-0 text-[52px] text-[color:var(--as-text-primary,#142443)] tracking-[-1.5px] w-[1296px]" data-node-id="10:454">
+          <p className="leading-[56px] mb-0">Make progress.</p>
+          <p className="leading-[56px]">Then make it better.</p>
+        </div>
+        <p className="[word-break:break-word] font-['Manrope:Regular'] font-normal leading-[28px] relative shrink-0 text-[18px] text-[color:var(--as-text-secondary,#58647a)] w-[840px]" data-node-id="10:455">
+          We put the plan into action with clear responsibilities, useful measurement and regular learning.
+        </p>
+        <div className="bg-[var(--as-border-default,#d5d9e1)] h-px relative shrink-0 w-[1296px]" data-node-id="10:456" data-name="Divider" />
+        <p className="[word-break:break-word] font-['IBM_Plex_Mono:Regular'] leading-[18px] not-italic relative shrink-0 text-[12px] text-[color:var(--as-text-primary,#142443)] tracking-[0.5px] w-[1296px]" data-node-id="10:457">
+          WHAT THIS PHASE PRODUCES
+        </p>
+        <p className="[word-break:break-word] font-['Space_Grotesk:Medium'] font-medium leading-[30px] relative shrink-0 text-[24px] text-[color:var(--as-text-primary,#142443)] tracking-[-0.4px] w-[1296px]" data-node-id="10:458">
+          Campaign and project delivery
+        </p>
+        <p className="[word-break:break-word] font-['Space_Grotesk:Medium'] font-medium leading-[30px] relative shrink-0 text-[24px] text-[color:var(--as-text-primary,#142443)] tracking-[-0.4px] w-[1296px]" data-node-id="10:459">
+          Performance reviews
+        </p>
+        <p className="[word-break:break-word] font-['Space_Grotesk:Medium'] font-medium leading-[30px] relative shrink-0 text-[24px] text-[color:var(--as-text-primary,#142443)] tracking-[-0.4px] w-[1296px]" data-node-id="10:460">
+          Ongoing optimisation
+        </p>
+      </div>
+      <div className="[word-break:break-word] bg-[var(--as-bg-dark,#142443)] content-stretch flex flex-col gap-[var(--as-space-24,24px)] items-start p-[var(--as-space-72,72px)] relative shrink-0 w-[1440px]" data-node-id="10:461" data-name="Working relationship">
+        <p className="font-['IBM_Plex_Mono:Regular'] leading-[18px] not-italic relative shrink-0 text-[12px] text-[color:var(--as-brand-amber,#ffce73)] tracking-[0.5px] w-[1296px]" data-node-id="10:462">
+          ONE CONNECTED PARTNERSHIP
+        </p>
+        <div className="font-['Space_Grotesk:Medium'] font-medium leading-[0] relative shrink-0 text-[52px] text-[color:var(--as-text-inverse,white)] tracking-[-1.5px] w-[1296px]" data-node-id="10:463">
+          <p className="leading-[56px] mb-0">A clear direction,</p>
+          <p className="leading-[56px]">shared all the way through.</p>
+        </div>
+        <p className="font-['Manrope:Regular'] font-normal leading-[28px] relative shrink-0 text-[18px] text-[color:var(--as-text-inverse-secondary,#b8c5df)] w-[760px]" data-node-id="10:464">
+          Each phase informs the next. We keep the work connected to the business objective and the decisions in front of you.
+        </p>
+      </div>
+      <div className="bg-[var(--as-bg-chalk,#f5f3ec)] content-stretch flex flex-col gap-[var(--as-space-24,24px)] items-start p-[var(--as-space-72,72px)] relative shrink-0 w-[1440px]" data-node-id="10:465" data-name="Common questions">
+        <p className="[word-break:break-word] font-['IBM_Plex_Mono:Regular'] leading-[18px] not-italic relative shrink-0 text-[12px] text-[color:var(--as-brand-cobalt,#244bff)] tracking-[0.5px] w-[1296px]" data-node-id="10:466">
+          A LITTLE MORE CLARITY
+        </p>
+        <div className="[word-break:break-word] font-['Space_Grotesk:Medium'] font-medium leading-[0] relative shrink-0 text-[52px] text-[color:var(--as-text-primary,#142443)] tracking-[-1.5px] w-[1296px]" data-node-id="10:467">
+          <p className="leading-[56px] mb-0">Good questions.</p>
+          <p className="leading-[56px]">Clear answers.</p>
+        </div>
+        <AsFaqRow className="bg-[var(--as-bg-chalk,#f5f3ec)] content-stretch flex gap-[var(--as-space-24,24px)] h-[76px] items-center p-[var(--as-space-24,24px)] relative shrink-0 w-[1296px]" question="Can we start with one service?" />
+        <div className="bg-[var(--as-border-default,#d5d9e1)] h-px relative shrink-0 w-[1296px]" data-node-id="10:472" data-name="Divider" />
+        <AsFaqRow className="bg-[var(--as-bg-chalk,#f5f3ec)] content-stretch flex gap-[var(--as-space-24,24px)] h-[76px] items-center p-[var(--as-space-24,24px)] relative shrink-0 w-[1296px]" question="Do we need a full brief before we speak?" />
+        <div className="bg-[var(--as-border-default,#d5d9e1)] h-px relative shrink-0 w-[1296px]" data-node-id="10:477" data-name="Divider" />
+        <AsFaqRow className="bg-[var(--as-bg-chalk,#f5f3ec)] content-stretch flex gap-[var(--as-space-24,24px)] h-[76px] items-center p-[var(--as-space-24,24px)] relative shrink-0 w-[1296px]" question="How do you define success?" />
+        <div className="bg-[var(--as-border-default,#d5d9e1)] h-px relative shrink-0 w-[1296px]" data-node-id="10:482" data-name="Divider" />
+      </div>
+      <div className="bg-[var(--as-bg-chalk,#f5f3ec)] content-stretch flex flex-col gap-[var(--as-space-32,32px)] items-start p-[var(--as-space-72,72px)] relative shrink-0 w-[1440px]" data-node-id="10:483" data-name="Conversation starter">
+        <p className="[word-break:break-word] font-['IBM_Plex_Mono:Regular'] leading-[18px] not-italic relative shrink-0 text-[12px] text-[color:var(--as-brand-cobalt,#244bff)] tracking-[0.5px] w-[1296px]" data-node-id="10:484">
+          YOUR NEXT CHAPTER
+        </p>
+        <div className="[word-break:break-word] font-['Space_Grotesk:Medium'] font-medium leading-[0] relative shrink-0 text-[72px] text-[color:var(--as-text-primary,#142443)] tracking-[-2.2px] w-[1296px]" data-node-id="10:485">
+          <p className="leading-[76px] mb-0">Your next move</p>
+          <p className="leading-[76px]">starts here.</p>
+        </div>
+        <p className="[word-break:break-word] font-['Manrope:Regular'] font-normal leading-[28px] relative shrink-0 text-[18px] text-[color:var(--as-text-secondary,#58647a)] w-[720px]" data-node-id="10:486">
+          Tell us where you want the business to go. We’ll help you see what needs to happen next.
+        </p>
+        <AsButton className="bg-[var(--as-brand-cobalt,#244bff)] content-stretch cursor-pointer flex gap-[var(--as-space-16,16px)] h-[52px] items-center px-[var(--as-space-24,24px)] py-[var(--as-space-16,16px)] relative shrink-0 w-[240px]" />
+      </div>
+      <div className="bg-[var(--as-bg-dark,#142443)] content-stretch flex flex-col gap-[var(--as-space-40,40px)] h-[330px] items-start p-[var(--as-space-64,64px)] relative shrink-0 w-[1440px]" data-node-id="10:491" data-name="AS / Footer">
+        <div className="content-stretch flex gap-[var(--as-space-96,96px)] items-start p-[var(--as-space-0,0px)] relative shrink-0 w-[1312px]" data-node-id="I10:491;8:119" data-name="Footer top">
+          <a className="content-stretch cursor-pointer flex gap-[var(--as-space-16,16px)] items-center relative shrink-0" data-node-id="I10:491;8:120" data-name="AS / Logo">
+            <div className="relative shrink-0 size-[56px]" data-node-id="I10:491;8:120;7:11" data-name="Momentum aperture">
+              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgMomentumAperture1} />
+            </div>
+            <div className="[word-break:break-word] font-['Space_Grotesk:Medium'] font-medium leading-[0] relative shrink-0 text-[32px] text-[color:var(--as-text-inverse,white)] text-left tracking-[-1px] w-[236px]" data-node-id="I10:491;8:120;7:13">
+              <p className="leading-[30px] mb-0">alexander</p>
+              <p className="leading-[30px]">{`stephen & co.`}</p>
+            </div>
+          </a>
+          <div className="[word-break:break-word] content-stretch flex flex-col gap-[var(--as-space-16,16px)] items-start p-[var(--as-space-0,0px)] relative shrink-0 w-[420px]" data-node-id="I10:491;8:124" data-name="Footer proposition">
+            <p className="font-['Space_Grotesk:Medium'] font-medium leading-[30px] relative shrink-0 text-[24px] text-[color:var(--as-text-inverse,white)] tracking-[-0.4px] w-[420px]" data-node-id="I10:491;8:125">
+              Clarity that creates momentum.
+            </p>
+            <p className="font-['Manrope:Regular'] font-normal leading-[24px] relative shrink-0 text-[16px] text-[color:var(--as-text-inverse-secondary,#b8c5df)] w-[420px]" data-node-id="I10:491;8:126">
+              Strategy, marketing and digital systems for ambitious businesses.
+            </p>
+          </div>
+          <div className="[word-break:break-word] content-stretch flex flex-col gap-[var(--as-space-12,12px)] items-start p-[var(--as-space-0,0px)] relative shrink-0 text-[color:var(--as-text-inverse,white)] w-[360px]" data-node-id="I10:491;8:127" data-name="Footer links">
+            <p className="font-['Manrope:Regular'] font-normal leading-[21px] relative shrink-0 text-[14px] w-[360px] whitespace-pre-wrap" data-node-id="I10:491;8:128">{`About   /   Services   /   Approach`}</p>
+            <a className="block cursor-pointer font-['Manrope:SemiBold'] font-semibold leading-[0] relative shrink-0 text-[16px] w-[360px]" data-node-id="I10:491;8:129">
+              <p className="leading-[20px]">Start a conversation</p>
+            </a>
+          </div>
+        </div>
+        <div className="bg-[var(--as-border-inverse,#58647a)] h-px relative shrink-0 w-[1312px]" data-node-id="I10:491;8:130" data-name="Divider" />
+        <p className="[word-break:break-word] font-['Manrope:Regular'] font-normal leading-[21px] relative shrink-0 text-[14px] text-[color:var(--as-text-inverse-secondary,#b8c5df)] w-[1312px]" data-node-id="I10:491;8:131">{`© Alexander Stephen & Co.`}</p>
+      </div>
+    </div>
+  );
+}

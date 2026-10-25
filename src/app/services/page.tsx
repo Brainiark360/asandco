@@ -1,68 +1,34 @@
-// src/app/services/page.tsx
+import type { Metadata } from "next";
+import ApproachSection from "../../components/ApproachSection";
+import FinalCTASection from "../../components/FinalCTASection";
+import { ButtonLink, Eyebrow, Lines, PageIntro, Section, TextLink } from "../../components/ui";
+import { services } from "../../lib/site-data";
 
-import ServicesClosing from "@/src/components/services/ServicesClosing";
-import ServiceDetail from "@/src/components/services/ServicesDetail";
-import ServicesFramework from "@/src/components/services/ServicesFramework";
-import ServicesHero from "@/src/components/services/ServicesHero";
-
-
-export const metadata = {
-  title: 'Services | Alexander Stephen & Co.',
-  description: 'Strategy-led services for structured business growth: Image Marketing, Growth Marketing, and Technology Systems.',
-};
+export const metadata: Metadata = { title: "Services", description: "Social media management, branding, consultancy, digital marketing, web and app development, photography, film, advertising, events and printing." };
 
 export default function ServicesPage() {
-  const services = [
-    {
-      id: '01',
-      title: 'Image Marketing & Personal Branding',
-      description: 'We help businesses and leaders shape how they are perceived by the market — building trust, credibility, and authority through intentional positioning and digital presence.',
-      outcome: 'A clear, credible presence that builds confidence before the first conversation.',
-      inclusions: [
-        'Brand and positioning strategy',
-        'Personal branding for founders and executives',
-        'Digital presence strategy',
-        'Content direction aligned with authority and trust',
-      ],
-    },
-    {
-      id: '02',
-      title: 'Growth Marketing',
-      description: 'We design and execute structured growth systems that drive demand, leads, and revenue through strategy, experimentation, and disciplined execution.',
-      outcome: 'Structured, measurable growth that supports business objectives.',
-      inclusions: [
-        'Growth strategy and funnel design',
-        'Customer acquisition and conversion systems',
-        'Performance marketing and optimisation',
-        'Measurement, reporting, and learning',
-      ],
-    },
-    {
-      id: '03',
-      title: 'Technology & Digital Systems',
-      description: 'We build the digital infrastructure that supports growth — from conversion-focused websites to web applications and data systems that enable scale.',
-      outcome: 'Technology that enables scale and supports better decision-making.',
-      inclusions: [
-        'Conversion-focused websites',
-        'Web applications and digital platforms',
-        'Data management and reporting systems',
-        'CRM and workflow solutions',
-      ],
-    },
-  ];
-
-  return (
-    <main className="min-h-screen">
-      <ServicesHero />
-      <ServicesFramework />
-      {services.map((service, index) => (
-        <ServiceDetail
-          key={service.id}
-          service={service}
-          isLast={index === services.length - 1}
-        />
-      ))}
-      <ServicesClosing />
-    </main>
-  );
+  return <>
+    <PageIntro eyebrow="OUR SERVICES" title={"A clearer path\nfrom ambition\nto growth."} description="From strategy and branding to social media, digital experiences and production. Choose a service to see how we can help.">
+      <nav id="services-index" className="service-shortcuts" aria-label="Explore our services">
+        {services.map((service) => <a key={service.id} href={"#" + service.id}>{service.shortcut}</a>)}
+      </nav>
+    </PageIntro>
+    {services.map((service, i) => <Section key={service.id} id={service.id} tone={i % 2 === 1 ? "tint" : "white"} className="service-detail">
+      <Eyebrow>{service.eyebrow}</Eyebrow>
+      <div className="service-detail__columns">
+        <div className="service-intent" data-reveal><h2 className="heading-lg"><Lines text={service.title} /></h2><p className="body-copy">{service.intent}</p></div>
+        <div className="service-inclusions" data-reveal>
+          <p className="eyebrow eyebrow--muted">TYPICAL INCLUSIONS</p>
+          <ul>{service.inclusions.map((inclusion) => <li key={inclusion}>{inclusion}</li>)}</ul>
+        </div>
+      </div>
+      <div className="service-outcome" data-reveal><Eyebrow>THE INTENDED OUTCOME</Eyebrow><p className="heading-sm">{service.outcome}</p></div>
+      <div className="service-detail__actions">
+        <ButtonLink>Discuss your project</ButtonLink>
+        <TextLink href="#services-index">Back to all services</TextLink>
+      </div>
+    </Section>)}
+    <ApproachSection />
+    <FinalCTASection />
+  </>;
 }

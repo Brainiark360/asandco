@@ -1,0 +1,50 @@
+const imgMomentumAperture = "https://www.figma.com/api/mcp/asset/0cf556ac-0e1f-4938-a097-6b5db8b64d86.svg";
+const imgClose = "https://www.figma.com/api/mcp/asset/1278ae73-a76e-473a-938e-4c40de6ccbf5.svg";
+const imgArrow = "https://www.figma.com/api/mcp/asset/9cd28129-1ada-43e6-8751-1f86b3a08d4a.svg";
+
+export default function MenuMobile() {
+  return (
+    <div className="bg-[var(--as-bg-chalk,#f5f3ec)] content-stretch flex flex-col gap-[var(--as-space-32,32px)] items-start p-[var(--as-space-24,24px)] relative size-full" data-node-id="10:1189" data-name="Menu / Mobile">
+      <div className="content-stretch flex gap-[var(--as-space-24,24px)] items-start p-[var(--as-space-0,0px)] relative shrink-0 w-[342px]" data-node-id="10:1190" data-name="Menu header">
+        <div className="content-stretch flex gap-[var(--as-space-12,9.96px)] items-center relative shrink-0" data-node-id="10:1191" data-name="AS / Logo">
+          <div className="relative shrink-0 size-[31.54px]" data-node-id="I10:1191;7:19" data-name="Momentum aperture">
+            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgMomentumAperture} />
+          </div>
+          <div className="[word-break:break-word] font-['Space_Grotesk:Medium'] font-medium leading-[0] relative shrink-0 text-[17.43px] text-[color:var(--as-text-primary,#142443)] tracking-[-0.6px] w-[136.12px]" data-node-id="I10:1191;7:21">
+            <p className="leading-[16.6px] mb-0">alexander</p>
+            <p className="leading-[16.6px]">{`stephen & co.`}</p>
+          </div>
+        </div>
+        <a className="content-stretch cursor-pointer flex flex-col gap-[var(--as-space-0,0px)] items-start p-[var(--as-space-12,12px)] relative shrink-0 size-[44px]" data-node-id="10:1195" data-name="Close menu">
+          <div className="relative shrink-0 size-[20px]" data-node-id="10:1196" data-name="Close">
+            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgClose} />
+          </div>
+        </a>
+      </div>
+      <div className="bg-[var(--as-border-default,#d5d9e1)] h-px relative shrink-0 w-[342px]" data-node-id="10:1198" data-name="Divider" />
+      <a className="[word-break:break-word] block cursor-pointer font-['Space_Grotesk:Medium'] font-medium leading-[0] relative shrink-0 text-[36px] text-[color:var(--as-text-primary,#142443)] tracking-[-1px] w-[342px]" data-node-id="10:1199">
+        <p className="leading-[40px]">Home</p>
+      </a>
+      <a className="[word-break:break-word] block cursor-pointer font-['Space_Grotesk:Medium'] font-medium leading-[0] relative shrink-0 text-[36px] text-[color:var(--as-text-primary,#142443)] tracking-[-1px] w-[342px]" data-node-id="10:1200">
+        <p className="leading-[40px]">About</p>
+      </a>
+      <a className="[word-break:break-word] block cursor-pointer font-['Space_Grotesk:Medium'] font-medium leading-[0] relative shrink-0 text-[36px] text-[color:var(--as-text-primary,#142443)] tracking-[-1px] w-[342px]" data-node-id="10:1201">
+        <p className="leading-[40px]">Services</p>
+      </a>
+      <a className="[word-break:break-word] block cursor-pointer font-['Space_Grotesk:Medium'] font-medium leading-[0] relative shrink-0 text-[36px] text-[color:var(--as-text-primary,#142443)] tracking-[-1px] w-[342px]" data-node-id="10:1202">
+        <p className="leading-[40px]">Approach</p>
+      </a>
+      <a className="[word-break:break-word] block cursor-pointer font-['Space_Grotesk:Medium'] font-medium leading-[0] relative shrink-0 text-[36px] text-[color:var(--as-text-primary,#142443)] tracking-[-1px] w-[342px]" data-node-id="10:1203">
+        <p className="leading-[40px]">Contact</p>
+      </a>
+      <a className="bg-[var(--as-brand-cobalt,#244bff)] content-stretch cursor-pointer flex gap-[var(--as-space-16,16px)] h-[52px] items-center justify-between px-[var(--as-space-24,24px)] py-[var(--as-space-16,16px)] relative shrink-0 w-[342px]" data-node-id="10:1204" data-name="AS / Button">
+        <p className="[word-break:break-word] font-['Manrope:SemiBold'] font-semibold leading-[20px] relative shrink-0 text-[16px] text-[color:var(--as-text-inverse,white)] text-left w-[156px]" data-node-id="I10:1204;8:3">
+          Start a conversation
+        </p>
+        <div className="relative shrink-0 size-[20px]" data-node-id="I10:1204;8:4" data-name="Arrow">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow} />
+        </div>
+      </a>
+    </div>
+  );
+}

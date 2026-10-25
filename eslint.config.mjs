@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Figma sandbox authoring scripts are not website runtime modules.
+    "design/**",
   ]),
 ]);
 

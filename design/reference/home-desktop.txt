@@ -1,0 +1,404 @@
+const imgMomentumAperture = "https://www.figma.com/api/mcp/asset/aa92ed1f-1e0e-4c72-8fd2-c405d1778be0.svg";
+const imgMomentumAperture1 = "https://www.figma.com/api/mcp/asset/7246461c-9333-4f5f-99dc-d34aa3404f57.svg";
+const imgArrow = "https://www.figma.com/api/mcp/asset/6a691994-13cd-4778-83a7-116b4667e221.svg";
+const imgArrow1 = "https://www.figma.com/api/mcp/asset/493701d2-52b3-433b-91f6-982315141e3b.svg";
+const imgMomentumAperture2 = "https://www.figma.com/api/mcp/asset/48cdb53f-52d6-4026-9321-ea1c8450eb73.svg";
+const imgMomentumAperture3 = "https://www.figma.com/api/mcp/asset/10ff8a7c-710c-49e8-bb61-b3cbd7febf92.svg";
+
+type AsLogoProps = {
+  className?: string;
+  colour?: "Midnight" | "White";
+  format?: "Primary" | "Compact";
+};
+
+function AsLogo({ className, colour = "White", format = "Primary" }: AsLogoProps) {
+  const isCompactAndMidnight = format === "Compact" && colour === "Midnight";
+  return (
+    <div className={className || `content-stretch flex items-center relative ${isCompactAndMidnight ? "gap-[var(--as-space-12,12px)]" : "gap-[var(--as-space-16,16px)]"}`} id={isCompactAndMidnight ? "node-7_18" : "node-7_10"}>
+      <div className={`relative shrink-0 ${isCompactAndMidnight ? "size-[38px]" : "size-[56px]"}`} id={isCompactAndMidnight ? "node-7_19" : "node-7_11"} data-name="Momentum aperture">
+        <img alt="" className="absolute block inset-0 max-w-none size-full" src={isCompactAndMidnight ? imgMomentumAperture1 : imgMomentumAperture} />
+      </div>
+      <div className={`[word-break:break-word] font-["Space_Grotesk:Medium"] font-medium leading-[0] relative shrink-0 ${isCompactAndMidnight ? "text-[21px] text-[color:var(--as-text-primary,#142443)] tracking-[-0.6px] w-[164px]" : "text-[32px] text-[color:var(--as-text-inverse,white)] tracking-[-1px] w-[236px]"}`} id={isCompactAndMidnight ? "node-7_21" : "node-7_13"}>
+        <p className={`mb-0 ${isCompactAndMidnight ? "leading-[20px]" : "leading-[30px]"}`}>alexander</p>
+        <p className={isCompactAndMidnight ? "leading-[20px]" : "leading-[30px]"}>{`stephen & co.`}</p>
+      </div>
+    </div>
+  );
+}
+
+type AsButtonProps = {
+  className?: string;
+  label?: string;
+  state?: "Default";
+  style?: "Primary" | "Inverse";
+};
+
+function AsButton({ className, label = "Start a conversation", state = "Default", style = "Primary" }: AsButtonProps) {
+  const isInverseAndDefault = style === "Inverse" && state === "Default";
+  const isPrimaryAndDefault = style === "Primary" && state === "Default";
+  return (
+    <div className={className || `content-stretch flex gap-[var(--as-space-16,16px)] h-[52px] items-center px-[var(--as-space-24,24px)] py-[var(--as-space-16,16px)] relative w-[240px] ${isInverseAndDefault ? "bg-[var(--as-brand-amber,#ffce73)]" : "bg-[var(--as-brand-cobalt,#244bff)]"}`} id={isInverseAndDefault ? "node-8_34" : "node-8_2"}>
+      {isPrimaryAndDefault && (
+        <>
+          <p className="[word-break:break-word] font-['Manrope:SemiBold'] font-semibold leading-[20px] relative shrink-0 text-[16px] text-[color:var(--as-text-inverse,white)] w-[156px]" data-node-id="8:3">
+            {label}
+          </p>
+          <div className="relative shrink-0 size-[20px]" data-node-id="8:4" data-name="Arrow">
+            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow} />
+          </div>
+        </>
+      )}
+      {isInverseAndDefault && (
+        <>
+          <p className="[word-break:break-word] font-['Manrope:SemiBold'] font-semibold leading-[20px] relative shrink-0 text-[16px] text-[color:var(--as-text-primary,#142443)] w-[156px]" data-node-id="8:35">
+            {label}
+          </p>
+          <div className="relative shrink-0 size-[20px]" data-node-id="8:36" data-name="Arrow">
+            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow1} />
+          </div>
+        </>
+      )}
+    </div>
+  );
+}
+
+type AsProcessCardProps = {
+  className?: string;
+  description?: string;
+  device?: "Desktop";
+  number?: string;
+  outcome?: string;
+  title?: string;
+};
+
+function AsProcessCard({ className, description = "Understand the business, define the opportunity and choose a direction.", device = "Desktop", number = "01", outcome = "OUTPUT / A CLEAR GROWTH PLAN", title = "Strategy" }: AsProcessCardProps) {
+  return (
+    <div className={className || "bg-[var(--as-bg-chalk,#f5f3ec)] content-stretch flex flex-col gap-[var(--as-space-24,24px)] h-[320px] items-start p-[var(--as-space-32,32px)] relative w-[416px]"} data-node-id="8:83">
+      <p className="[word-break:break-word] font-['IBM_Plex_Mono:Regular'] leading-[18px] not-italic relative shrink-0 text-[12px] text-[color:var(--as-brand-cobalt,#244bff)] tracking-[0.5px] w-[352px]" data-node-id="8:84">
+        {number}
+      </p>
+      <p className="[word-break:break-word] font-['Space_Grotesk:Medium'] font-medium leading-[38px] relative shrink-0 text-[32px] text-[color:var(--as-text-primary,#142443)] tracking-[-0.7px] w-[352px]" data-node-id="8:85">
+        {title}
+      </p>
+      <p className="[word-break:break-word] font-['Manrope:Regular'] font-normal leading-[24px] relative shrink-0 text-[16px] text-[color:var(--as-text-secondary,#58647a)] w-[352px]" data-node-id="8:86">
+        {description}
+      </p>
+      <div className="bg-[var(--as-border-default,#d5d9e1)] h-px relative shrink-0 w-[352px]" data-node-id="8:87" data-name="Divider" />
+      <p className="[word-break:break-word] font-['IBM_Plex_Mono:Regular'] leading-[18px] not-italic relative shrink-0 text-[12px] text-[color:var(--as-text-primary,#142443)] tracking-[0.5px] w-[352px]" data-node-id="8:88">
+        {outcome}
+      </p>
+    </div>
+  );
+}
+
+type AsProjectPlaceholderProps = {
+  className?: string;
+  device?: "Desktop";
+  subtitle?: string;
+  title?: string;
+};
+
+function AsProjectPlaceholder({ className, device = "Desktop", subtitle = "Positioning + digital presence", title = "Client A" }: AsProjectPlaceholderProps) {
+  return (
+    <div className={className || "bg-[var(--as-bg-chalk,#f5f3ec)] content-stretch flex flex-col gap-[var(--as-space-24,24px)] h-[460px] items-start p-[var(--as-space-0,0px)] relative w-[636px]"} data-node-id="8:89">
+      <div className="bg-[var(--as-bg-tint,#e8edff)] content-stretch flex gap-[var(--as-space-32,32px)] h-[300px] items-center p-[var(--as-space-32,32px)] relative shrink-0 w-[636px]" data-node-id="8:90" data-name="Project visual placeholder">
+        <div className="relative shrink-0 size-[220px]" data-node-id="8:91" data-name="Momentum aperture">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgMomentumAperture2} />
+        </div>
+        <div className="[word-break:break-word] content-stretch flex flex-col gap-[var(--as-space-12,12px)] items-start p-[var(--as-space-0,0px)] relative shrink-0 w-[270px]" data-node-id="8:93" data-name="Placeholder note">
+          <p className="font-['IBM_Plex_Mono:Regular'] leading-[18px] not-italic relative shrink-0 text-[12px] text-[color:var(--as-brand-cobalt,#244bff)] tracking-[0.5px] w-[270px]" data-node-id="8:94">
+            CLIENT A
+          </p>
+          <p className="font-['Manrope:Regular'] font-normal leading-[21px] relative shrink-0 text-[14px] text-[color:var(--as-text-secondary,#58647a)] w-[270px]" data-node-id="8:95">
+            Visual placeholder
+          </p>
+        </div>
+      </div>
+      <p className="[word-break:break-word] font-['Space_Grotesk:Medium'] font-medium leading-[30px] relative shrink-0 text-[24px] text-[color:var(--as-text-primary,#142443)] tracking-[-0.4px] w-[636px]" data-node-id="8:96">
+        {title}
+      </p>
+      <p className="[word-break:break-word] font-['Manrope:Regular'] font-normal leading-[24px] relative shrink-0 text-[16px] text-[color:var(--as-text-secondary,#58647a)] w-[636px]" data-node-id="8:97">
+        {subtitle}
+      </p>
+      <p className="[word-break:break-word] font-['IBM_Plex_Mono:Regular'] leading-[18px] not-italic relative shrink-0 text-[12px] text-[color:var(--as-text-secondary,#58647a)] tracking-[0.5px] w-[636px]" data-node-id="8:98">
+        CASE STUDY PLACEHOLDER
+      </p>
+    </div>
+  );
+}
+
+type AsServiceCardProps = {
+  className?: string;
+  description?: string;
+  device?: "Desktop";
+  eyebrow?: string;
+  title?: string;
+};
+
+function AsServiceCard({ className, description = "Define how your business and its leaders are understood, remembered and trusted.", device = "Desktop", eyebrow = "01 / POSITIONING", title = "Brand & personal presence" }: AsServiceCardProps) {
+  return (
+    <div className={className || "bg-[var(--as-bg-white,white)] content-stretch flex flex-col gap-[var(--as-space-24,24px)] h-[344px] items-start p-[var(--as-space-32,32px)] relative w-[416px]"} data-node-id="8:75">
+      <p className="[word-break:break-word] font-['IBM_Plex_Mono:Regular'] leading-[18px] not-italic relative shrink-0 text-[12px] text-[color:var(--as-brand-cobalt,#244bff)] tracking-[0.5px] w-[352px]" data-node-id="8:76">
+        {eyebrow}
+      </p>
+      <p className="[word-break:break-word] font-['Space_Grotesk:Medium'] font-medium leading-[38px] relative shrink-0 text-[32px] text-[color:var(--as-text-primary,#142443)] tracking-[-0.7px] w-[352px]" data-node-id="8:77">
+        {title}
+      </p>
+      <p className="[word-break:break-word] font-['Manrope:Regular'] font-normal leading-[24px] relative shrink-0 text-[16px] text-[color:var(--as-text-secondary,#58647a)] w-[352px]" data-node-id="8:78">
+        {description}
+      </p>
+      <div className="content-stretch flex gap-[var(--as-space-12,12px)] items-start p-[var(--as-space-0,0px)] relative shrink-0 w-[352px]" data-node-id="8:79" data-name="Service link">
+        <p className="[word-break:break-word] font-['Manrope:SemiBold'] font-semibold leading-[20px] relative shrink-0 text-[16px] text-[color:var(--as-text-primary,#142443)] w-[320px]" data-node-id="8:80">
+          Explore service
+        </p>
+        <div className="relative shrink-0 size-[20px]" data-node-id="8:81" data-name="Arrow">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow1} />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default function HomeDesktop() {
+  return (
+    <div className="bg-[var(--as-bg-chalk,#f5f3ec)] content-stretch flex flex-col items-start relative size-full" data-node-id="9:2" data-name="Home / Desktop">
+      <div className="bg-[var(--as-bg-chalk,#f5f3ec)] content-stretch flex gap-[var(--as-space-32,32px)] h-[100px] items-center justify-between px-[var(--as-space-64,64px)] py-[var(--as-space-20,20px)] relative shrink-0 w-[1440px]" data-node-id="10:2" data-name="AS / Navigation">
+        <AsLogo className="content-stretch flex gap-[var(--as-space-12,12px)] items-center relative shrink-0" colour="Midnight" format="Compact" />
+        <div className="[word-break:break-word] content-stretch flex font-['Manrope:SemiBold'] font-semibold gap-[var(--as-space-24,24px)] items-center p-[var(--as-space-0,0px)] relative shrink-0 text-[14px] w-[510px]" data-node-id="I10:2;8:56" data-name="Nav links">
+          <p className="leading-[20px] relative shrink-0 text-[color:var(--as-brand-cobalt,#244bff)] w-[66px]" data-node-id="I10:2;8:57">
+            Home
+          </p>
+          <a className="block cursor-pointer leading-[0] relative shrink-0 text-[color:var(--as-text-primary,#142443)] w-[66px]" data-node-id="I10:2;8:58">
+            <p className="leading-[20px]">About</p>
+          </a>
+          <a className="block cursor-pointer leading-[0] relative shrink-0 text-[color:var(--as-text-primary,#142443)] w-[76px]" data-node-id="I10:2;8:59">
+            <p className="leading-[20px]">Services</p>
+          </a>
+          <a className="block cursor-pointer leading-[0] relative shrink-0 text-[color:var(--as-text-primary,#142443)] w-[82px]" data-node-id="I10:2;8:60">
+            <p className="leading-[20px]">Approach</p>
+          </a>
+          <a className="block cursor-pointer leading-[0] relative shrink-0 text-[color:var(--as-text-primary,#142443)] w-[66px]" data-node-id="I10:2;8:61">
+            <p className="leading-[20px]">Contact</p>
+          </a>
+        </div>
+        <a className="bg-[var(--as-brand-cobalt,#244bff)] content-stretch cursor-pointer flex gap-[var(--as-space-16,16px)] h-[52px] items-center px-[var(--as-space-24,24px)] py-[var(--as-space-16,16px)] relative shrink-0 w-[240px]" data-node-id="I10:2;8:62" data-name="AS / Button">
+          <p className="[word-break:break-word] font-['Manrope:SemiBold'] font-semibold leading-[20px] relative shrink-0 text-[16px] text-[color:var(--as-text-inverse,white)] text-left w-[156px]" data-node-id="I10:2;8:62;8:3">
+            Start a conversation
+          </p>
+          <div className="relative shrink-0 size-[20px]" data-node-id="I10:2;8:62;8:4" data-name="Arrow">
+            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow} />
+          </div>
+        </a>
+      </div>
+      <div className="bg-[var(--as-brand-cobalt,#244bff)] content-stretch flex flex-col gap-[var(--as-space-32,32px)] items-start p-[var(--as-space-72,72px)] relative shrink-0 w-[1440px]" data-node-id="10:23" data-name="Home hero">
+        <p className="[word-break:break-word] font-['IBM_Plex_Mono:Regular'] leading-[18px] not-italic relative shrink-0 text-[12px] text-[color:var(--as-text-inverse,white)] tracking-[0.5px] w-[1296px]" data-node-id="10:24">
+          STRATEGY / MARKETING / DIGITAL SYSTEMS
+        </p>
+        <div className="content-stretch flex gap-[var(--as-space-96,96px)] items-center p-[var(--as-space-0,0px)] relative shrink-0 w-[1296px]" data-node-id="10:25" data-name="Hero composition">
+          <div className="content-stretch flex flex-col gap-[var(--as-space-32,32px)] items-start p-[var(--as-space-0,0px)] relative shrink-0 w-[720px]" data-node-id="10:26" data-name="Hero message">
+            <div className="[word-break:break-word] font-['Space_Grotesk:Medium'] font-medium leading-[0] relative shrink-0 text-[96px] text-[color:var(--as-text-inverse,white)] tracking-[-3px] w-[720px]" data-node-id="10:27">
+              <p className="leading-[96px] mb-0">Make your</p>
+              <p className="leading-[96px]">next move count.</p>
+            </div>
+            <p className="[word-break:break-word] font-['Manrope:Regular'] font-normal leading-[30px] relative shrink-0 text-[20px] text-[color:var(--as-text-inverse,white)] w-[620px]" data-node-id="10:28">
+              We bring clear strategy, disciplined marketing and the right technology together to move your business forward.
+            </p>
+            <div className="content-stretch cursor-pointer flex gap-[var(--as-space-24,24px)] items-start p-[var(--as-space-0,0px)] relative shrink-0 w-[620px]" data-node-id="10:29" data-name="Hero actions">
+              <AsButton className="bg-[var(--as-brand-amber,#ffce73)] content-stretch flex gap-[var(--as-space-16,16px)] h-[52px] items-center px-[var(--as-space-24,24px)] py-[var(--as-space-16,16px)] relative shrink-0 w-[240px]" style="Inverse" />
+              <a className="content-stretch flex gap-[var(--as-space-12,12px)] items-start p-[var(--as-space-0,0px)] relative shrink-0 w-[260px]" data-node-id="10:34" data-name="Link / Explore services">
+                <p className="[word-break:break-word] font-['Manrope:SemiBold'] font-semibold leading-[20px] relative shrink-0 text-[16px] text-[color:var(--as-text-inverse,white)] text-left w-[228px]" data-node-id="10:35">
+                  Explore services
+                </p>
+                <div className="relative shrink-0 size-[20px]" data-node-id="10:36" data-name="Arrow">
+                  <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow} />
+                </div>
+              </a>
+            </div>
+          </div>
+          <div className="content-stretch flex flex-col gap-[var(--as-space-24,24px)] items-start p-[var(--as-space-0,0px)] relative shrink-0 w-[480px]" data-node-id="10:38" data-name="Brand sculpture">
+            <div className="content-stretch flex gap-[var(--as-space-12,82.5px)] items-center relative shrink-0" data-node-id="10:39" data-name="AS / Logo">
+              <div className="relative shrink-0 size-[440px]" data-node-id="I10:39;7:33" data-name="Momentum aperture">
+                <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgMomentumAperture3} />
+              </div>
+            </div>
+            <p className="[word-break:break-word] font-['IBM_Plex_Mono:Regular'] leading-[18px] not-italic relative shrink-0 text-[12px] text-[color:var(--as-text-inverse,white)] tracking-[0.5px] w-[480px]" data-node-id="10:42">
+              CLEAR THINKING. REAL MOMENTUM.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="bg-[var(--as-bg-chalk,#f5f3ec)] content-stretch flex flex-col gap-[var(--as-space-24,24px)] items-start p-[var(--as-space-72,72px)] relative shrink-0 w-[1440px]" data-node-id="10:43" data-name="Client relationships">
+        <p className="[word-break:break-word] font-['IBM_Plex_Mono:Regular'] leading-[18px] not-italic relative shrink-0 text-[12px] text-[color:var(--as-text-secondary,#58647a)] tracking-[0.5px] w-[1296px]" data-node-id="10:44">
+          SELECTED CLIENT RELATIONSHIPS
+        </p>
+        <div className="content-stretch flex gap-[var(--as-space-24,24px)] items-start p-[var(--as-space-0,0px)] relative shrink-0 w-[1296px]" data-node-id="10:45" data-name="Client logo placeholders">
+          <div className="content-stretch flex flex-col gap-[var(--as-space-8,8px)] items-start p-[var(--as-space-24,24px)] relative shrink-0 w-[306px]" data-node-id="10:46" data-name="Logo placeholder / CLIENT A">
+            <p className="[word-break:break-word] font-['Space_Grotesk:Medium'] font-medium leading-[30px] relative shrink-0 text-[24px] text-[color:var(--as-text-secondary,#58647a)] tracking-[-0.4px] w-[258px]" data-node-id="10:47">
+              CLIENT A
+            </p>
+          </div>
+          <div className="content-stretch flex flex-col gap-[var(--as-space-8,8px)] items-start p-[var(--as-space-24,24px)] relative shrink-0 w-[306px]" data-node-id="10:48" data-name="Logo placeholder / CLIENT B">
+            <p className="[word-break:break-word] font-['Space_Grotesk:Medium'] font-medium leading-[30px] relative shrink-0 text-[24px] text-[color:var(--as-text-secondary,#58647a)] tracking-[-0.4px] w-[258px]" data-node-id="10:49">
+              CLIENT B
+            </p>
+          </div>
+          <div className="content-stretch flex flex-col gap-[var(--as-space-8,8px)] items-start p-[var(--as-space-24,24px)] relative shrink-0 w-[306px]" data-node-id="10:50" data-name="Logo placeholder / CLIENT C">
+            <p className="[word-break:break-word] font-['Space_Grotesk:Medium'] font-medium leading-[30px] relative shrink-0 text-[24px] text-[color:var(--as-text-secondary,#58647a)] tracking-[-0.4px] w-[258px]" data-node-id="10:51">
+              CLIENT C
+            </p>
+          </div>
+          <div className="content-stretch flex flex-col gap-[var(--as-space-8,8px)] items-start p-[var(--as-space-24,24px)] relative shrink-0 w-[306px]" data-node-id="10:52" data-name="Logo placeholder / CLIENT D">
+            <p className="[word-break:break-word] font-['Space_Grotesk:Medium'] font-medium leading-[30px] relative shrink-0 text-[24px] text-[color:var(--as-text-secondary,#58647a)] tracking-[-0.4px] w-[258px]" data-node-id="10:53">
+              CLIENT D
+            </p>
+          </div>
+        </div>
+        <p className="[word-break:break-word] font-['IBM_Plex_Mono:Regular'] leading-[18px] not-italic relative shrink-0 text-[12px] text-[color:var(--as-text-secondary,#58647a)] tracking-[0.5px] w-[1296px]" data-node-id="10:54">
+          CLIENT NAMES AND LOGOS SHOWN AS PLACEHOLDERS
+        </p>
+        <div className="bg-[var(--as-border-default,#d5d9e1)] h-px relative shrink-0 w-[1296px]" data-node-id="10:55" data-name="Divider" />
+      </div>
+      <div className="bg-[var(--as-bg-chalk,#f5f3ec)] content-stretch flex flex-col gap-[var(--as-space-40,40px)] items-start p-[var(--as-space-72,72px)] relative shrink-0 w-[1440px]" data-node-id="10:56" data-name="Services overview">
+        <p className="[word-break:break-word] font-['IBM_Plex_Mono:Regular'] leading-[18px] not-italic relative shrink-0 text-[12px] text-[color:var(--as-brand-cobalt,#244bff)] tracking-[0.5px] w-[1296px]" data-node-id="10:57">
+          WHAT WE DO
+        </p>
+        <div className="[word-break:break-word] font-['Space_Grotesk:Medium'] font-medium leading-[0] relative shrink-0 text-[52px] text-[color:var(--as-text-primary,#142443)] tracking-[-1.5px] w-[1296px]" data-node-id="10:58">
+          <p className="leading-[56px] mb-0">Three ways to</p>
+          <p className="leading-[56px]">move forward.</p>
+        </div>
+        <p className="[word-break:break-word] font-['Manrope:Regular'] font-normal leading-[28px] relative shrink-0 text-[18px] text-[color:var(--as-text-secondary,#58647a)] w-[760px]" data-node-id="10:59">
+          A focused set of services, connected by a clear strategy.
+        </p>
+        <div className="content-stretch cursor-pointer flex gap-[var(--as-space-24,24px)] items-start p-[var(--as-space-0,0px)] relative shrink-0 w-[1296px]" data-node-id="10:60" data-name="Service pillars">
+          <AsServiceCard
+            className="bg-[var(--as-bg-white,white)] content-stretch flex flex-col gap-[var(--as-space-24,24px)] h-[344px] items-start p-[var(--as-space-32,32px)] relative shrink-0 w-[416px]"
+            title="Brand &
+personal presence"
+          />
+          <AsServiceCard
+            className="bg-[var(--as-bg-white,white)] content-stretch flex flex-col gap-[var(--as-space-24,24px)] h-[344px] items-start p-[var(--as-space-32,32px)] relative shrink-0 w-[416px]"
+            description="Connect the right audience, channels and conversion systems to your business goals."
+            eyebrow="02 / DEMAND"
+            title="Growth
+marketing"
+          />
+          <AsServiceCard
+            className="bg-[var(--as-bg-white,white)] content-stretch flex flex-col gap-[var(--as-space-24,24px)] h-[344px] items-start p-[var(--as-space-32,32px)] relative shrink-0 w-[416px]"
+            description="Build the websites, platforms and workflows that support your next stage of growth."
+            eyebrow="03 / INFRASTRUCTURE"
+            title="Technology &
+digital systems"
+          />
+        </div>
+      </div>
+      <div className="bg-[var(--as-bg-white,white)] content-stretch flex flex-col gap-[var(--as-space-40,40px)] items-start p-[var(--as-space-72,72px)] relative shrink-0 w-[1440px]" data-node-id="10:85" data-name="Selected work">
+        <p className="[word-break:break-word] font-['IBM_Plex_Mono:Regular'] leading-[18px] not-italic relative shrink-0 text-[12px] text-[color:var(--as-brand-cobalt,#244bff)] tracking-[0.5px] w-[1296px]" data-node-id="10:86">
+          SELECTED WORK
+        </p>
+        <div className="[word-break:break-word] font-['Space_Grotesk:Medium'] font-medium leading-[0] relative shrink-0 text-[52px] text-[color:var(--as-text-primary,#142443)] tracking-[-1.5px] w-[1296px]" data-node-id="10:87">
+          <p className="leading-[56px] mb-0">Good thinking.</p>
+          <p className="leading-[56px]">Built into action.</p>
+        </div>
+        <div className="content-stretch flex gap-[var(--as-space-24,24px)] items-start p-[var(--as-space-0,0px)] relative shrink-0 w-[1296px]" data-node-id="10:88" data-name="Client work placeholders">
+          <AsProjectPlaceholder className="bg-[var(--as-bg-chalk,#f5f3ec)] content-stretch flex flex-col gap-[var(--as-space-24,24px)] h-[460px] items-start p-[var(--as-space-0,0px)] relative shrink-0 w-[636px]" subtitle="Brand positioning + digital presence" />
+          <div className="bg-[var(--as-bg-chalk,#f5f3ec)] content-stretch flex flex-col gap-[var(--as-space-24,24px)] h-[460px] items-start p-[var(--as-space-0,0px)] relative shrink-0 w-[636px]" data-node-id="10:99" data-name="AS / Project placeholder">
+            <div className="bg-[var(--as-brand-amber,#ffce73)] content-stretch flex gap-[var(--as-space-32,32px)] h-[300px] items-center p-[var(--as-space-32,32px)] relative shrink-0 w-[636px]" data-node-id="I10:99;8:90" data-name="Project visual placeholder">
+              <div className="relative shrink-0 size-[220px]" data-node-id="I10:99;8:91" data-name="Momentum aperture">
+                <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgMomentumAperture2} />
+              </div>
+              <div className="[word-break:break-word] content-stretch flex flex-col gap-[var(--as-space-12,12px)] items-start p-[var(--as-space-0,0px)] relative shrink-0 w-[270px]" data-node-id="I10:99;8:93" data-name="Placeholder note">
+                <p className="font-['IBM_Plex_Mono:Regular'] leading-[18px] not-italic relative shrink-0 text-[12px] text-[color:var(--as-brand-cobalt,#244bff)] tracking-[0.5px] w-[270px]" data-node-id="I10:99;8:94">
+                  CLIENT B
+                </p>
+                <p className="font-['Manrope:Regular'] font-normal leading-[21px] relative shrink-0 text-[14px] text-[color:var(--as-text-secondary,#58647a)] w-[270px]" data-node-id="I10:99;8:95">
+                  Visual placeholder
+                </p>
+              </div>
+            </div>
+            <p className="[word-break:break-word] font-['Space_Grotesk:Medium'] font-medium leading-[30px] relative shrink-0 text-[24px] text-[color:var(--as-text-primary,#142443)] tracking-[-0.4px] w-[636px]" data-node-id="I10:99;8:96">
+              Client B
+            </p>
+            <p className="[word-break:break-word] font-['Manrope:Regular'] font-normal leading-[24px] relative shrink-0 text-[16px] text-[color:var(--as-text-secondary,#58647a)] w-[636px]" data-node-id="I10:99;8:97">
+              Growth strategy + digital systems
+            </p>
+            <p className="[word-break:break-word] font-['IBM_Plex_Mono:Regular'] leading-[18px] not-italic relative shrink-0 text-[12px] text-[color:var(--as-text-secondary,#58647a)] tracking-[0.5px] w-[636px]" data-node-id="I10:99;8:98">
+              CASE STUDY PLACEHOLDER
+            </p>
+          </div>
+        </div>
+        <p className="[word-break:break-word] font-['Manrope:Regular'] font-normal leading-[21px] relative shrink-0 text-[14px] text-[color:var(--as-text-secondary,#58647a)] w-[1296px]" data-node-id="10:109">
+          Case study titles and visuals are placeholders for the design review.
+        </p>
+      </div>
+      <div className="bg-[var(--as-bg-dark,#142443)] content-stretch flex flex-col gap-[var(--as-space-40,40px)] items-start p-[var(--as-space-72,72px)] relative shrink-0 w-[1440px]" data-node-id="10:110" data-name="How we work">
+        <p className="[word-break:break-word] font-['IBM_Plex_Mono:Regular'] leading-[18px] not-italic relative shrink-0 text-[12px] text-[color:var(--as-brand-amber,#ffce73)] tracking-[0.5px] w-[1296px]" data-node-id="10:111">
+          OUR APPROACH
+        </p>
+        <div className="[word-break:break-word] font-['Space_Grotesk:Medium'] font-medium leading-[0] relative shrink-0 text-[52px] text-[color:var(--as-text-inverse,white)] tracking-[-1.5px] w-[1296px]" data-node-id="10:112">
+          <p className="leading-[56px] mb-0">Clear direction.</p>
+          <p className="leading-[56px]">Connected action.</p>
+        </div>
+        <div className="content-stretch flex gap-[var(--as-space-24,24px)] items-start p-[var(--as-space-0,0px)] relative shrink-0 w-[1296px]" data-node-id="10:113" data-name="Three phase framework">
+          <AsProcessCard className="bg-[var(--as-bg-chalk,#f5f3ec)] content-stretch flex flex-col gap-[var(--as-space-24,24px)] h-[320px] items-start p-[var(--as-space-32,32px)] relative shrink-0 w-[416px]" description="Understand the business, define the opportunity and choose a clear direction." outcome="OUTPUT / YOUR GROWTH PLAN" />
+          <AsProcessCard className="bg-[var(--as-bg-chalk,#f5f3ec)] content-stretch flex flex-col gap-[var(--as-space-24,24px)] h-[320px] items-start p-[var(--as-space-32,32px)] relative shrink-0 w-[416px]" description="Build the digital foundations and workflows that make the plan possible." number="02" outcome="OUTPUT / CONNECTED FOUNDATIONS" title="Systems" />
+          <AsProcessCard className="bg-[var(--as-bg-chalk,#f5f3ec)] content-stretch flex flex-col gap-[var(--as-space-24,24px)] h-[320px] items-start p-[var(--as-space-32,32px)] relative shrink-0 w-[416px]" description="Put the plan to work, measure what matters and improve with intent." number="03" outcome="OUTPUT / MEASURABLE PROGRESS" title="Execution" />
+        </div>
+        <AsButton className="bg-[var(--as-brand-amber,#ffce73)] content-stretch cursor-pointer flex gap-[var(--as-space-16,16px)] h-[52px] items-center px-[var(--as-space-24,24px)] py-[var(--as-space-16,16px)] relative shrink-0 w-[240px]" label="See our approach" style="Inverse" />
+      </div>
+      <div className="bg-[var(--as-brand-amber,#ffce73)] content-stretch flex flex-col gap-[var(--as-space-32,32px)] items-start p-[var(--as-space-72,72px)] relative shrink-0 w-[1440px]" data-node-id="10:136" data-name="Partnership statement">
+        <p className="[word-break:break-word] font-['IBM_Plex_Mono:Regular'] leading-[18px] not-italic relative shrink-0 text-[12px] text-[color:var(--as-text-primary,#142443)] tracking-[0.5px] w-[1296px]" data-node-id="10:137">
+          A STRATEGIC PARTNER
+        </p>
+        <div className="[word-break:break-word] font-['Space_Grotesk:Medium'] font-medium leading-[0] relative shrink-0 text-[52px] text-[color:var(--as-text-primary,#142443)] tracking-[-1.5px] w-[1296px]" data-node-id="10:138">
+          <p className="leading-[56px] mb-0">Better together.</p>
+          <p className="leading-[56px]">By design.</p>
+        </div>
+        <p className="[word-break:break-word] font-['Manrope:Regular'] font-normal leading-[28px] relative shrink-0 text-[18px] text-[color:var(--as-text-primary,#142443)] w-[800px]" data-node-id="10:139">
+          We work with founders and leadership teams to bring the bigger picture and the practical next step into focus.
+        </p>
+        <a className="content-stretch cursor-pointer flex gap-[var(--as-space-12,12px)] items-start p-[var(--as-space-0,0px)] relative shrink-0 w-[320px]" data-node-id="10:140" data-name="Link / Meet Alexander Stephen">
+          <p className="[word-break:break-word] font-['Manrope:SemiBold'] font-semibold leading-[20px] relative shrink-0 text-[16px] text-[color:var(--as-text-primary,#142443)] text-left w-[288px]" data-node-id="10:141">
+            Meet Alexander Stephen
+          </p>
+          <div className="relative shrink-0 size-[20px]" data-node-id="10:142" data-name="Arrow">
+            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow1} />
+          </div>
+        </a>
+      </div>
+      <div className="bg-[var(--as-bg-chalk,#f5f3ec)] content-stretch flex flex-col gap-[var(--as-space-32,32px)] items-start p-[var(--as-space-72,72px)] relative shrink-0 w-[1440px]" data-node-id="10:144" data-name="Conversation starter">
+        <p className="[word-break:break-word] font-['IBM_Plex_Mono:Regular'] leading-[18px] not-italic relative shrink-0 text-[12px] text-[color:var(--as-brand-cobalt,#244bff)] tracking-[0.5px] w-[1296px]" data-node-id="10:145">
+          YOUR NEXT CHAPTER
+        </p>
+        <div className="[word-break:break-word] font-['Space_Grotesk:Medium'] font-medium leading-[0] relative shrink-0 text-[72px] text-[color:var(--as-text-primary,#142443)] tracking-[-2.2px] w-[1296px]" data-node-id="10:146">
+          <p className="leading-[76px] mb-0">Your next move</p>
+          <p className="leading-[76px]">starts here.</p>
+        </div>
+        <p className="[word-break:break-word] font-['Manrope:Regular'] font-normal leading-[28px] relative shrink-0 text-[18px] text-[color:var(--as-text-secondary,#58647a)] w-[720px]" data-node-id="10:147">
+          Tell us where you want the business to go. We’ll help you see what needs to happen next.
+        </p>
+        <AsButton className="bg-[var(--as-brand-cobalt,#244bff)] content-stretch cursor-pointer flex gap-[var(--as-space-16,16px)] h-[52px] items-center px-[var(--as-space-24,24px)] py-[var(--as-space-16,16px)] relative shrink-0 w-[240px]" />
+      </div>
+      <div className="bg-[var(--as-bg-dark,#142443)] content-stretch flex flex-col gap-[var(--as-space-40,40px)] h-[330px] items-start p-[var(--as-space-64,64px)] relative shrink-0 w-[1440px]" data-node-id="10:152" data-name="AS / Footer">
+        <div className="content-stretch flex gap-[var(--as-space-96,96px)] items-start p-[var(--as-space-0,0px)] relative shrink-0 w-[1312px]" data-node-id="I10:152;8:119" data-name="Footer top">
+          <AsLogo className="content-stretch flex gap-[var(--as-space-16,16px)] items-center relative shrink-0" />
+          <div className="[word-break:break-word] content-stretch flex flex-col gap-[var(--as-space-16,16px)] items-start p-[var(--as-space-0,0px)] relative shrink-0 w-[420px]" data-node-id="I10:152;8:124" data-name="Footer proposition">
+            <p className="font-['Space_Grotesk:Medium'] font-medium leading-[30px] relative shrink-0 text-[24px] text-[color:var(--as-text-inverse,white)] tracking-[-0.4px] w-[420px]" data-node-id="I10:152;8:125">
+              Clarity that creates momentum.
+            </p>
+            <p className="font-['Manrope:Regular'] font-normal leading-[24px] relative shrink-0 text-[16px] text-[color:var(--as-text-inverse-secondary,#b8c5df)] w-[420px]" data-node-id="I10:152;8:126">
+              Strategy, marketing and digital systems for ambitious businesses.
+            </p>
+          </div>
+          <div className="[word-break:break-word] content-stretch flex flex-col gap-[var(--as-space-12,12px)] items-start p-[var(--as-space-0,0px)] relative shrink-0 text-[color:var(--as-text-inverse,white)] w-[360px]" data-node-id="I10:152;8:127" data-name="Footer links">
+            <p className="font-['Manrope:Regular'] font-normal leading-[21px] relative shrink-0 text-[14px] w-[360px] whitespace-pre-wrap" data-node-id="I10:152;8:128">{`About   /   Services   /   Approach`}</p>
+            <a className="block cursor-pointer font-['Manrope:SemiBold'] font-semibold leading-[0] relative shrink-0 text-[16px] w-[360px]" data-node-id="I10:152;8:129">
+              <p className="leading-[20px]">Start a conversation</p>
+            </a>
+          </div>
+        </div>
+        <div className="bg-[var(--as-border-inverse,#58647a)] h-px relative shrink-0 w-[1312px]" data-node-id="I10:152;8:130" data-name="Divider" />
+        <p className="[word-break:break-word] font-['Manrope:Regular'] font-normal leading-[21px] relative shrink-0 text-[14px] text-[color:var(--as-text-inverse-secondary,#b8c5df)] w-[1312px]" data-node-id="I10:152;8:131">{`© Alexander Stephen & Co.`}</p>
+      </div>
+    </div>
+  );
+}

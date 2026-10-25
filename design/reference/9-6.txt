@@ -1,0 +1,211 @@
+const imgExpand = "https://www.figma.com/api/mcp/asset/b270ddd0-e7a6-4856-ace7-d149fac1c4bd.svg";
+const imgArrow = "https://www.figma.com/api/mcp/asset/f8fee02e-0b81-4fbc-8a02-1a9e3bbfb8ec.svg";
+const imgMomentumAperture = "https://www.figma.com/api/mcp/asset/910b132b-2b65-443d-8d3a-1a48d15397cb.svg";
+const imgMomentumAperture1 = "https://www.figma.com/api/mcp/asset/d764c98a-5c05-47d6-b3e9-23ba9d03d8d3.svg";
+
+type AsFaqRowProps = {
+  className?: string;
+  device?: "Desktop";
+  question?: string;
+};
+
+function AsFaqRow({ className, device = "Desktop", question = "What does the first conversation involve?" }: AsFaqRowProps) {
+  return (
+    <div className={className || "bg-[var(--as-bg-chalk,#f5f3ec)] content-stretch flex gap-[var(--as-space-24,24px)] h-[76px] items-center p-[var(--as-space-24,24px)] relative w-[1296px]"} data-node-id="8:99">
+      <p className="[word-break:break-word] font-['Manrope:Regular'] font-normal leading-[30px] relative shrink-0 text-[20px] text-[color:var(--as-text-primary,#142443)] w-[1200px]" data-node-id="8:100">
+        {question}
+      </p>
+      <div className="relative shrink-0 size-[24px]" data-node-id="8:101" data-name="Expand">
+        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgExpand} />
+      </div>
+    </div>
+  );
+}
+
+type AsButtonProps = {
+  className?: string;
+  label?: string;
+  state?: "Default";
+  style?: "Primary";
+};
+
+function AsButton({ className, label = "Start a conversation", state = "Default", style = "Primary" }: AsButtonProps) {
+  return (
+    <div className={className || "bg-[var(--as-brand-cobalt,#244bff)] content-stretch flex gap-[var(--as-space-16,16px)] h-[52px] items-center px-[var(--as-space-24,24px)] py-[var(--as-space-16,16px)] relative w-[240px]"} data-node-id="8:2">
+      <p className="[word-break:break-word] font-['Manrope:SemiBold'] font-semibold leading-[20px] relative shrink-0 text-[16px] text-[color:var(--as-text-inverse,white)] w-[156px]" data-node-id="8:3">
+        {label}
+      </p>
+      <div className="relative shrink-0 size-[20px]" data-node-id="8:4" data-name="Arrow">
+        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow} />
+      </div>
+    </div>
+  );
+}
+
+type AsTextareaProps = {
+  className?: string;
+  device?: "Desktop";
+  help?: string;
+  label?: string;
+  placeholder?: string;
+};
+
+function AsTextarea({ className, device = "Desktop", help = "", label = "What would you like to move forward? *", placeholder = "Tell us about your goals and the challenge." }: AsTextareaProps) {
+  return (
+    <div className={className || "content-stretch flex flex-col gap-[var(--as-space-8,8px)] h-[210px] items-start p-[var(--as-space-0,0px)] relative w-[588px]"} data-node-id="13:110">
+      <p className="[word-break:break-word] font-['Manrope:Regular'] font-normal leading-[21px] relative shrink-0 text-[14px] text-[color:var(--as-text-primary,#142443)] w-[588px]" data-node-id="13:111">
+        {label}
+      </p>
+      <div className="bg-[var(--as-bg-white,white)] border-[length:var(--as-stroke-1,1px)] border-[var(--as-border-default,#d5d9e1)] border-solid content-stretch flex flex-col gap-[var(--as-space-0,0px)] h-[136px] items-start p-[var(--as-space-16,16px)] relative shrink-0 w-[588px]" data-node-id="13:112" data-name="Field surface">
+        <p className="[word-break:break-word] font-['Manrope:Regular'] font-normal leading-[24px] relative shrink-0 text-[16px] text-[color:var(--as-text-secondary,#58647a)] w-[556px]" data-node-id="13:113">
+          {placeholder}
+        </p>
+      </div>
+      <p className="[word-break:break-word] font-['Manrope:Regular'] font-normal leading-[21px] relative shrink-0 text-[14px] text-[color:var(--as-text-secondary,#58647a)] w-[588px]" data-node-id="13:114">
+        {help}
+      </p>
+    </div>
+  );
+}
+
+type AsInputProps = {
+  className?: string;
+  device?: "Desktop";
+  help?: string;
+  label?: string;
+  placeholder?: string;
+  state?: "Default";
+};
+
+function AsInput({ className, device = "Desktop", help = "", label = "Full name", placeholder = "Your full name", state = "Default" }: AsInputProps) {
+  return (
+    <div className={className || "content-stretch flex flex-col gap-[var(--as-space-8,8px)] h-[130px] items-start p-[var(--as-space-0,0px)] relative w-[588px]"} data-node-id="8:103">
+      <p className="[word-break:break-word] font-['Manrope:Regular'] font-normal leading-[21px] relative shrink-0 text-[14px] text-[color:var(--as-text-primary,#142443)] w-[588px]" data-node-id="8:104">
+        {label}
+      </p>
+      <div className="bg-[var(--as-bg-white,white)] border-[length:var(--as-stroke-1,1px)] border-[var(--as-border-default,#d5d9e1)] border-solid content-stretch flex flex-col gap-[var(--as-space-0,0px)] h-[56px] items-start p-[var(--as-space-16,16px)] relative shrink-0 w-[588px]" data-node-id="8:105" data-name="Field surface">
+        <p className="[word-break:break-word] font-['Manrope:Regular'] font-normal leading-[24px] relative shrink-0 text-[16px] text-[color:var(--as-text-secondary,#58647a)] w-[556px]" data-node-id="8:106">
+          {placeholder}
+        </p>
+      </div>
+      <p className="[word-break:break-word] font-['Manrope:Regular'] font-normal leading-[21px] relative shrink-0 text-[14px] text-[color:var(--as-text-secondary,#58647a)] w-[588px]" data-node-id="8:107">
+        {help}
+      </p>
+    </div>
+  );
+}
+
+export default function ContactDesktop() {
+  return (
+    <div className="bg-[var(--as-bg-chalk,#f5f3ec)] content-stretch flex flex-col items-start relative size-full" data-node-id="9:6" data-name="Contact / Desktop">
+      <div className="bg-[var(--as-bg-chalk,#f5f3ec)] content-stretch flex gap-[var(--as-space-32,32px)] h-[100px] items-center justify-between px-[var(--as-space-64,64px)] py-[var(--as-space-20,20px)] relative shrink-0 w-[1440px]" data-node-id="10:505" data-name="AS / Navigation">
+        <a className="content-stretch cursor-pointer flex gap-[var(--as-space-12,12px)] items-center relative shrink-0" data-node-id="I10:505;8:52" data-name="AS / Logo">
+          <div className="relative shrink-0 size-[38px]" data-node-id="I10:505;8:52;7:19" data-name="Momentum aperture">
+            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgMomentumAperture} />
+          </div>
+          <div className="[word-break:break-word] font-['Space_Grotesk:Medium'] font-medium leading-[0] relative shrink-0 text-[21px] text-[color:var(--as-text-primary,#142443)] text-left tracking-[-0.6px] w-[164px]" data-node-id="I10:505;8:52;7:21">
+            <p className="leading-[20px] mb-0">alexander</p>
+            <p className="leading-[20px]">{`stephen & co.`}</p>
+          </div>
+        </a>
+        <div className="[word-break:break-word] content-stretch flex font-['Manrope:SemiBold'] font-semibold gap-[var(--as-space-24,24px)] items-center p-[var(--as-space-0,0px)] relative shrink-0 text-[14px] w-[510px]" data-node-id="I10:505;8:56" data-name="Nav links">
+          <a className="block cursor-pointer leading-[0] relative shrink-0 text-[color:var(--as-text-primary,#142443)] w-[66px]" data-node-id="I10:505;8:57">
+            <p className="leading-[20px]">Home</p>
+          </a>
+          <a className="block cursor-pointer leading-[0] relative shrink-0 text-[color:var(--as-text-primary,#142443)] w-[66px]" data-node-id="I10:505;8:58">
+            <p className="leading-[20px]">About</p>
+          </a>
+          <a className="block cursor-pointer leading-[0] relative shrink-0 text-[color:var(--as-text-primary,#142443)] w-[76px]" data-node-id="I10:505;8:59">
+            <p className="leading-[20px]">Services</p>
+          </a>
+          <a className="block cursor-pointer leading-[0] relative shrink-0 text-[color:var(--as-text-primary,#142443)] w-[82px]" data-node-id="I10:505;8:60">
+            <p className="leading-[20px]">Approach</p>
+          </a>
+          <p className="leading-[20px] relative shrink-0 text-[color:var(--as-brand-cobalt,#244bff)] w-[66px]" data-node-id="I10:505;8:61">
+            Contact
+          </p>
+        </div>
+        <AsButton className="bg-[var(--as-brand-cobalt,#244bff)] content-stretch flex gap-[var(--as-space-16,16px)] h-[52px] items-center px-[var(--as-space-24,24px)] py-[var(--as-space-16,16px)] relative shrink-0 w-[240px]" />
+      </div>
+      <div className="bg-[var(--as-bg-chalk,#f5f3ec)] content-stretch flex flex-col gap-[var(--as-space-40,40px)] items-start p-[var(--as-space-72,72px)] relative shrink-0 w-[1440px]" data-node-id="10:520" data-name="Contact introduction and enquiry">
+        <div className="content-stretch flex gap-[var(--as-space-72,72px)] items-start p-[var(--as-space-0,0px)] relative shrink-0 w-[1296px]" data-node-id="10:521" data-name="Contact layout">
+          <div className="content-stretch flex flex-col gap-[var(--as-space-32,32px)] items-start p-[var(--as-space-0,0px)] relative shrink-0 w-[588px]" data-node-id="10:522" data-name="Contact invitation">
+            <p className="[word-break:break-word] font-['IBM_Plex_Mono:Regular'] leading-[18px] not-italic relative shrink-0 text-[12px] text-[color:var(--as-brand-cobalt,#244bff)] tracking-[0.5px] w-[588px]" data-node-id="10:523">
+              START A CONVERSATION
+            </p>
+            <div className="[word-break:break-word] font-['Space_Grotesk:Medium'] font-medium leading-[0] relative shrink-0 text-[72px] text-[color:var(--as-text-primary,#142443)] tracking-[-2.2px] w-[588px]" data-node-id="10:524">
+              <p className="leading-[76px] mb-0">Let’s make</p>
+              <p className="leading-[76px] mb-0">your next</p>
+              <p className="leading-[76px]">move count.</p>
+            </div>
+            <p className="[word-break:break-word] font-['Manrope:Regular'] font-normal leading-[28px] relative shrink-0 text-[18px] text-[color:var(--as-text-secondary,#58647a)] w-[540px]" data-node-id="10:525">
+              Tell us where the business is now, where you want to go and what stands in the way.
+            </p>
+            <div className="bg-[var(--as-border-default,#d5d9e1)] h-px relative shrink-0 w-[588px]" data-node-id="10:526" data-name="Divider" />
+            <p className="[word-break:break-word] font-['IBM_Plex_Mono:Regular'] leading-[18px] not-italic relative shrink-0 text-[12px] text-[color:var(--as-brand-cobalt,#244bff)] tracking-[0.5px] w-[588px]" data-node-id="10:527">
+              WHAT HAPPENS NEXT
+            </p>
+            <p className="[word-break:break-word] font-['Manrope:Regular'] font-normal leading-[24px] relative shrink-0 text-[16px] text-[color:var(--as-text-primary,#142443)] w-[588px] whitespace-pre-wrap" data-node-id="10:528">{`01  /  We review your enquiry.`}</p>
+            <p className="[word-break:break-word] font-['Manrope:Regular'] font-normal leading-[24px] relative shrink-0 text-[16px] text-[color:var(--as-text-primary,#142443)] w-[588px] whitespace-pre-wrap" data-node-id="10:529">{`02  /  We discuss the business and your goals.`}</p>
+            <p className="[word-break:break-word] font-['Manrope:Regular'] font-normal leading-[24px] relative shrink-0 text-[16px] text-[color:var(--as-text-primary,#142443)] w-[588px] whitespace-pre-wrap" data-node-id="10:530">{`03  /  We agree a useful next step.`}</p>
+          </div>
+          <div className="bg-[var(--as-bg-white,white)] content-stretch flex flex-col gap-[var(--as-space-16,16px)] items-start p-[var(--as-space-24,24px)] relative shrink-0 w-[636px]" data-node-id="10:531" data-name="Enquiry form">
+            <AsInput className="content-stretch flex flex-col gap-[var(--as-space-8,8px)] h-[130px] items-start p-[var(--as-space-0,0px)] relative shrink-0 w-[588px]" label="Full name *" />
+            <AsInput className="content-stretch flex flex-col gap-[var(--as-space-8,8px)] h-[130px] items-start p-[var(--as-space-0,0px)] relative shrink-0 w-[588px]" label="Work email *" placeholder="you@company.com" />
+            <AsInput className="content-stretch flex flex-col gap-[var(--as-space-8,8px)] h-[130px] items-start p-[var(--as-space-0,0px)] relative shrink-0 w-[588px]" label="Company" placeholder="Your company name" />
+            <AsInput className="content-stretch flex flex-col gap-[var(--as-space-8,8px)] h-[130px] items-start p-[var(--as-space-0,0px)] relative shrink-0 w-[588px]" label="Website" placeholder="https://yourwebsite.com" />
+            <AsTextarea className="content-stretch flex flex-col gap-[var(--as-space-8,8px)] h-[210px] items-start p-[var(--as-space-0,0px)] relative shrink-0 w-[588px]" />
+            <AsButton className="bg-[var(--as-brand-cobalt,#244bff)] content-stretch cursor-pointer flex gap-[var(--as-space-16,16px)] h-[52px] items-center px-[var(--as-space-24,24px)] py-[var(--as-space-16,16px)] relative shrink-0 w-[240px]" label="Send enquiry" />
+            <p className="[word-break:break-word] font-['Manrope:Regular'] font-normal leading-[21px] relative shrink-0 text-[14px] text-[color:var(--as-text-secondary,#58647a)] w-[588px]" data-node-id="10:561">
+              We’ll use your details to respond to your enquiry.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="bg-[var(--as-bg-chalk,#f5f3ec)] content-stretch flex flex-col gap-[var(--as-space-24,24px)] items-start p-[var(--as-space-72,72px)] relative shrink-0 w-[1440px]" data-node-id="10:562" data-name="Common questions">
+        <p className="[word-break:break-word] font-['IBM_Plex_Mono:Regular'] leading-[18px] not-italic relative shrink-0 text-[12px] text-[color:var(--as-brand-cobalt,#244bff)] tracking-[0.5px] w-[1296px]" data-node-id="10:563">
+          A LITTLE MORE CLARITY
+        </p>
+        <div className="[word-break:break-word] font-['Space_Grotesk:Medium'] font-medium leading-[0] relative shrink-0 text-[52px] text-[color:var(--as-text-primary,#142443)] tracking-[-1.5px] w-[1296px]" data-node-id="10:564">
+          <p className="leading-[56px] mb-0">Good questions.</p>
+          <p className="leading-[56px]">Clear answers.</p>
+        </div>
+        <AsFaqRow className="bg-[var(--as-bg-chalk,#f5f3ec)] content-stretch flex gap-[var(--as-space-24,24px)] h-[76px] items-center p-[var(--as-space-24,24px)] relative shrink-0 w-[1296px]" />
+        <div className="bg-[var(--as-border-default,#d5d9e1)] h-px relative shrink-0 w-[1296px]" data-node-id="10:569" data-name="Divider" />
+        <AsFaqRow className="bg-[var(--as-bg-chalk,#f5f3ec)] content-stretch flex gap-[var(--as-space-24,24px)] h-[76px] items-center p-[var(--as-space-24,24px)] relative shrink-0 w-[1296px]" question="Can you help us define the scope?" />
+        <div className="bg-[var(--as-border-default,#d5d9e1)] h-px relative shrink-0 w-[1296px]" data-node-id="10:574" data-name="Divider" />
+        <AsFaqRow className="bg-[var(--as-bg-chalk,#f5f3ec)] content-stretch flex gap-[var(--as-space-24,24px)] h-[76px] items-center p-[var(--as-space-24,24px)] relative shrink-0 w-[1296px]" question="Can we discuss a single project?" />
+        <div className="bg-[var(--as-border-default,#d5d9e1)] h-px relative shrink-0 w-[1296px]" data-node-id="10:579" data-name="Divider" />
+      </div>
+      <div className="bg-[var(--as-bg-dark,#142443)] content-stretch flex flex-col gap-[var(--as-space-40,40px)] h-[330px] items-start p-[var(--as-space-64,64px)] relative shrink-0 w-[1440px]" data-node-id="10:580" data-name="AS / Footer">
+        <div className="content-stretch flex gap-[var(--as-space-96,96px)] items-start p-[var(--as-space-0,0px)] relative shrink-0 w-[1312px]" data-node-id="I10:580;8:119" data-name="Footer top">
+          <a className="content-stretch cursor-pointer flex gap-[var(--as-space-16,16px)] items-center relative shrink-0" data-node-id="I10:580;8:120" data-name="AS / Logo">
+            <div className="relative shrink-0 size-[56px]" data-node-id="I10:580;8:120;7:11" data-name="Momentum aperture">
+              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgMomentumAperture1} />
+            </div>
+            <div className="[word-break:break-word] font-['Space_Grotesk:Medium'] font-medium leading-[0] relative shrink-0 text-[32px] text-[color:var(--as-text-inverse,white)] text-left tracking-[-1px] w-[236px]" data-node-id="I10:580;8:120;7:13">
+              <p className="leading-[30px] mb-0">alexander</p>
+              <p className="leading-[30px]">{`stephen & co.`}</p>
+            </div>
+          </a>
+          <div className="[word-break:break-word] content-stretch flex flex-col gap-[var(--as-space-16,16px)] items-start p-[var(--as-space-0,0px)] relative shrink-0 w-[420px]" data-node-id="I10:580;8:124" data-name="Footer proposition">
+            <p className="font-['Space_Grotesk:Medium'] font-medium leading-[30px] relative shrink-0 text-[24px] text-[color:var(--as-text-inverse,white)] tracking-[-0.4px] w-[420px]" data-node-id="I10:580;8:125">
+              Clarity that creates momentum.
+            </p>
+            <p className="font-['Manrope:Regular'] font-normal leading-[24px] relative shrink-0 text-[16px] text-[color:var(--as-text-inverse-secondary,#b8c5df)] w-[420px]" data-node-id="I10:580;8:126">
+              Strategy, marketing and digital systems for ambitious businesses.
+            </p>
+          </div>
+          <div className="[word-break:break-word] content-stretch flex flex-col gap-[var(--as-space-12,12px)] items-start p-[var(--as-space-0,0px)] relative shrink-0 text-[color:var(--as-text-inverse,white)] w-[360px]" data-node-id="I10:580;8:127" data-name="Footer links">
+            <p className="font-['Manrope:Regular'] font-normal leading-[21px] relative shrink-0 text-[14px] w-[360px] whitespace-pre-wrap" data-node-id="I10:580;8:128">{`About   /   Services   /   Approach`}</p>
+            <p className="font-['Manrope:SemiBold'] font-semibold leading-[20px] relative shrink-0 text-[16px] w-[360px]" data-node-id="I10:580;8:129">
+              Start a conversation
+            </p>
+          </div>
+        </div>
+        <div className="bg-[var(--as-border-inverse,#58647a)] h-px relative shrink-0 w-[1312px]" data-node-id="I10:580;8:130" data-name="Divider" />
+        <p className="[word-break:break-word] font-['Manrope:Regular'] font-normal leading-[21px] relative shrink-0 text-[14px] text-[color:var(--as-text-inverse-secondary,#b8c5df)] w-[1312px]" data-node-id="I10:580;8:131">{`© Alexander Stephen & Co.`}</p>
+      </div>
+    </div>
+  );
+}
