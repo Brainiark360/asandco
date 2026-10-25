@@ -31,6 +31,7 @@ export default function Navigation() {
   }, [open]);
 
   return <header className="site-header">
+    <div className="reading-progress" aria-hidden="true"><span /></div>
     <div className="header-inner">
       <Logo />
       <nav className="desktop-nav" aria-label="Main navigation">

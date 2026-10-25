@@ -25,7 +25,9 @@ export function BrandSculpture({ context }: { context: "hero" | "about" | "proje
     success: { desktop: "/brand/10-594-imgMomentumAperture1.svg", mobile: "/brand/10-1208-imgMomentumAperture1.svg", desktopSize: 180, mobileSize: 120 },
   }[context];
   return <span className={"brand-sculpture brand-sculpture--" + context} aria-hidden="true">
-    <Image className="brand-sculpture__desktop" src={assets.desktop} width={assets.desktopSize} height={assets.desktopSize} alt="" preload={context === "hero"} />
-    <Image className="brand-sculpture__mobile" src={assets.mobile} width={assets.mobileSize} height={assets.mobileSize} alt="" preload={context === "hero"} />
+    <span className="brand-sculpture__motion">
+      <Image className="brand-sculpture__desktop" src={assets.desktop} width={assets.desktopSize} height={assets.desktopSize} alt="" preload={context === "hero"} />
+      <Image className="brand-sculpture__mobile" src={assets.mobile} width={assets.mobileSize} height={assets.mobileSize} alt="" preload={context === "hero"} />
+    </span>
   </span>;
 }

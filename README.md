@@ -27,7 +27,7 @@ Tests exercise the real TypeScript validator and API route, with outbound delive
 - Original, unchanged SVG exports: public/brand/.
 - Retrieved Figma layout references and asset provenance: design/reference/.
 - Desktop reference: 1440px. Mobile reference: 390px. Intermediate sizes reflow without fixed canvas widths.
-- 600ms headline choreography, 450ms once-only reveals, 220ms interactions and menu transitions. No scroll hijacking. The client logos use a seamless linear scrolling strip (84s desktop / 72s mobile) with pause/resume, hover/focus pause and a single-copy, manually scrollable reduced-motion/no-JavaScript fallback. Reduced motion is supported globally.
+- Motion: coordinated 400ms page entries, 600ms headline choreography and 540ms once-only directional reveals with a 40ms stagger capped at 120ms. Brand artwork and a reading-progress line use native scroll timelines where supported. The client strip retains its seamless 84s/72s loop and pause controls. Reduced-motion, focus, deep-link and no-JavaScript fallbacks are built in; no scroll hijacking. See design/motion-system.md.
 - The superseded grayscale section components have been replaced with the shared Clear Momentum components.
 - Small accessibility adjustment from the mockup: body copy on cobalt is white (5.96:1 contrast), rather than muted blue-gray (3.43:1).
 

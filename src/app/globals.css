@@ -15,10 +15,13 @@
   --success: #236b4b;
   --duration-fast: 150ms;
   --duration-normal: 220ms;
-  --duration-page: 350ms;
-  --duration-reveal: 450ms;
+  --duration-page: 400ms;
+  --duration-reveal: 540ms;
   --duration-hero: 600ms;
   --duration-client-loop: 84s;
+  --reveal-distance: 28px;
+  --artwork-travel: 24px;
+  --artwork-tilt: 3deg;
   --ease-standard: cubic-bezier(.2, 0, 0, 1);
   --ease-enter: cubic-bezier(.16, 1, .3, 1);
   --page-gutter: 72px;
@@ -102,6 +105,8 @@ ul { margin: 0; padding: 0; list-style: none; }
 .text-link--light { color: var(--white); }
 
 .site-header { position: sticky; top: 0; z-index: 40; background: var(--chalk); }
+.reading-progress { display: none; position: absolute; inset: auto 0 0; height: 3px; overflow: hidden; pointer-events: none; }
+.reading-progress > span { display: block; width: 100%; height: 100%; background: var(--cobalt); transform: scaleX(0); transform-origin: left; }
 .header-inner { height: 100px; max-width: 1440px; margin-inline: auto; padding: 20px 64px; display: flex; align-items: center; justify-content: space-between; gap: 32px; }
 .desktop-nav { display: flex; align-items: center; gap: 24px; width: 510px; font-size: 14px; line-height: 20px; font-weight: 600; }
 .desktop-nav a { position: relative; display: flex; align-items: center; min-height: 44px; width: 66px; }
@@ -133,6 +138,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 .hero-actions .text-link { width: 260px; }
 .hero-sculpture { min-width: 0; display: flex; flex-direction: column; gap: 24px; }
 .brand-sculpture { display: inline-block; flex-shrink: 0; vertical-align: top; }
+.brand-sculpture__motion { display: block; max-width: 100%; }
 .brand-sculpture__mobile { display: none; }
 .brand-sculpture--hero { max-width: 100%; }
 .brand-sculpture--hero .brand-sculpture__desktop { max-width: 100%; height: auto; }
@@ -251,24 +257,54 @@ ul { margin: 0; padding: 0; list-style: none; }
 .footer-contact { font-weight: 600; line-height: 20px; }
 .site-footer .small-copy { color: var(--inverse-muted); }
 
-/* Motion vocabulary: 150ms feedback, 220ms controls, 350ms route/menu,
-   450ms once-only reveals, 600ms hero entrances; 84s linear client loop
-   (72s at the smaller mobile tile size, approximately 32-35px/second). */
+/* Motion vocabulary: 150ms feedback, 220ms controls, 400ms page entrances,
+   540ms once-only reveals + at most 120ms sibling stagger, 600ms headlines.
+   Scroll-linked artwork/progress is native and progressively enhanced.
+   The client strip retains its 84s/72s linear loop and separate controls. */
 .page-enter { animation: page-in var(--duration-page) var(--ease-enter) both; }
 .heading-enter .title-line { overflow: clip; }
 .heading-enter .title-line > span { animation: title-in var(--duration-hero) var(--ease-enter) both; animation-delay: calc(var(--line-index, 0) * 40ms); }
-[data-reveal] { transition: opacity var(--duration-reveal) var(--ease-enter), translate var(--duration-reveal) var(--ease-enter); }
-[data-reveal-state="pending"] { opacity: 0; translate: 0 18px; }
-[data-reveal-state="visible"], [data-reveal]:focus-within { opacity: 1; translate: none; }
-.service-card[data-reveal] { transition: opacity var(--duration-reveal) var(--ease-enter), translate var(--duration-reveal) var(--ease-enter), transform var(--duration-normal) var(--ease-standard), box-shadow var(--duration-normal) var(--ease-standard); }
-.three-column > [data-reveal-state="visible"]:nth-child(2), .project-grid > [data-reveal-state="visible"]:nth-child(2) { transition-delay: 40ms, 40ms, 0ms, 0ms; }
-.three-column > [data-reveal-state="visible"]:nth-child(3) { transition-delay: 80ms, 80ms, 0ms, 0ms; }
-@keyframes title-in { from { transform: translateY(105%); } to { transform: translateY(0); } }
-@keyframes page-in { from { opacity: .3; } to { opacity: 1; } }
+.home-hero > .section__content > .eyebrow,
+.page-intro > .section__content > .eyebrow { animation: content-in var(--duration-page) var(--ease-enter) both; }
+.hero-description, .page-intro > .section__content > .body-copy { animation: content-in var(--duration-page) var(--ease-enter) 120ms both; }
+.hero-actions, .hero-sculpture > .eyebrow { animation: content-in var(--duration-page) var(--ease-enter) 220ms both; }
+.service-shortcuts > a { animation: content-in var(--duration-page) var(--ease-enter) 140ms both; }
+.service-shortcuts > a:nth-child(3n + 2) { animation-delay: 180ms; }
+.service-shortcuts > a:nth-child(3n) { animation-delay: 220ms; }
+.success-section .section__content > :not(.heading-enter) { animation: content-in var(--duration-page) var(--ease-enter) 140ms both; }
+[data-reveal] { --reveal-x: 0px; --reveal-y: var(--reveal-distance); --reveal-scale: 1; transition: opacity var(--duration-reveal) var(--ease-enter), translate var(--duration-reveal) var(--ease-enter), scale var(--duration-reveal) var(--ease-enter); transition-delay: var(--reveal-delay, 0ms); }
+[data-reveal="left"] { --reveal-x: calc(-1 * var(--reveal-distance)); --reveal-y: 0px; }
+[data-reveal="right"] { --reveal-x: var(--reveal-distance); --reveal-y: 0px; }
+[data-reveal="scale"] { --reveal-scale: .96; }
+[data-reveal="line"] { --reveal-y: 0px; --reveal-scale: 0 1; transform-origin: left; }
+[data-reveal-state="pending"] { opacity: 0; translate: var(--reveal-x) var(--reveal-y); scale: var(--reveal-scale); }
+[data-reveal-state="visible"], [data-reveal-state="instant"], [data-reveal]:focus-within { opacity: 1; translate: none; scale: 1; }
+[data-reveal-state="instant"], [data-reveal]:focus-within { transition: none; }
+.service-card[data-reveal] { transition: opacity var(--duration-reveal) var(--ease-enter), translate var(--duration-reveal) var(--ease-enter), scale var(--duration-reveal) var(--ease-enter), transform var(--duration-normal) var(--ease-standard), box-shadow var(--duration-normal) var(--ease-standard); transition-delay: var(--reveal-delay, 0ms), var(--reveal-delay, 0ms), var(--reveal-delay, 0ms), 0ms, 0ms; }
+.service-card[data-reveal-state="instant"], .service-card[data-reveal]:focus-within { transition: none; }
+@keyframes title-in { from { opacity: 0; transform: translateY(110%) rotate(1deg); } to { opacity: 1; transform: none; } }
+@keyframes page-in { from { opacity: .2; translate: 0 14px; } to { opacity: 1; translate: none; } }
+@keyframes content-in { from { opacity: 0; translate: 0 18px; } to { opacity: 1; translate: none; } }
 @keyframes sculpture-in { from { opacity: 0; transform: translate(16px, 16px) rotate(3deg); } to { opacity: 1; transform: none; } }
 @keyframes menu-link-in { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
 @keyframes answer-in { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: none; } }
 @keyframes client-scroll { to { transform: translateX(-50%); } }
+@keyframes reading-progress { to { transform: scaleX(1); } }
+@keyframes header-depth { to { box-shadow: 0 6px 24px rgb(20 36 67 / 8%); } }
+@keyframes artwork-drift {
+  from { translate: 0 var(--artwork-travel); rotate: calc(-1 * var(--artwork-tilt)); }
+  to { translate: 0 calc(-1 * var(--artwork-travel)); rotate: var(--artwork-tilt); }
+}
+/* These enhancements never replace the observer-based reveals or normal scrolling. */
+@supports (animation-timeline: scroll(root block)) {
+  .reading-progress { display: block; }
+  .reading-progress > span { animation: reading-progress linear both; animation-timeline: scroll(root block); }
+  .site-header { animation: header-depth linear both; animation-timeline: scroll(root block); animation-range: 0px 80px; }
+}
+@supports (animation-timeline: view()) {
+  .brand-sculpture { view-timeline: --artwork-view block; }
+  .brand-sculpture__motion { animation: artwork-drift linear both; animation-timeline: --artwork-view; }
+}
 
 @media (min-width: 1100px) and (max-width: 1320px) {
   :root { --page-gutter: 48px; }
@@ -310,7 +346,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   .contact-form { padding: 20px; }
 }
 @media (max-width: 767px) {
-  :root { --page-gutter: 24px; }
+  :root { --page-gutter: 24px; --reveal-distance: 18px; --artwork-travel: 12px; --artwork-tilt: 1.5deg; }
   html { scroll-padding-top: 104px; }
   .section { padding-block: 24px; }
   .header-inner { padding-inline: 24px; }
@@ -370,7 +406,10 @@ ul { margin: 0; padding: 0; list-style: none; }
   :root { --duration-fast: 0ms; --duration-normal: 0ms; --duration-page: 0ms; --duration-reveal: 0ms; --duration-hero: 0ms; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: .01ms !important; animation-delay: 0ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
-  [data-reveal-state] { opacity: 1; translate: none; }
+  [data-reveal-state] { opacity: 1; translate: none; scale: 1; }
+  .brand-sculpture__motion { animation: none; translate: none; rotate: none; }
+  .site-header { animation: none; }
+  .reading-progress { display: none; }
   .service-card:hover, .project-card:hover .brand-sculpture, .logo:hover > img, .button:hover .arrow, .text-link:hover .arrow, .service-card:hover .arrow { transform: none; }
   .client-marquee[data-animated="true"] .client-marquee__track { animation: none; transform: none; }
   .client-marquee[data-animated="true"] .client-marquee__viewport { overflow-x: auto; }
@@ -378,9 +417,11 @@ ul { margin: 0; padding: 0; list-style: none; }
   .client-marquee[data-animated="true"] .client-marquee__toggle { display: none; }
 }
 @media print {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
   .site-header, .site-footer, .hero-actions, .button, .skip-link { display: none; }
   .section { break-inside: avoid; padding-block: 24px; }
-  [data-reveal] { opacity: 1; translate: none; }
+  [data-reveal] { opacity: 1; translate: none; scale: 1; }
+  .page-enter, .heading-enter .title-line > span, .brand-sculpture__motion { animation: none; translate: none; rotate: none; }
   .client-marquee[data-animated="true"] .client-marquee__track { animation: none; transform: none; width: 100%; }
   .client-marquee__group { flex-wrap: wrap; width: 100%; padding: 0; }
   .client-marquee[data-animated="true"] .client-marquee__group[aria-hidden="true"],
