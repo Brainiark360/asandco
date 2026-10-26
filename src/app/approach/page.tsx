@@ -1,13 +1,15 @@
-import type { Metadata } from "next";
 import FinalCTASection from "../../components/FinalCTASection";
 import FAQSection from "../../components/FAQSection";
 import { Eyebrow, Lines, PageIntro, Section } from "../../components/ui";
 import { approachQuestions, phases } from "../../lib/site-data";
+import StructuredData from "../../components/StructuredData";
+import { pageMetadata } from "../../lib/seo";
 
-export const metadata: Metadata = { title: "Our approach", description: "Strategy sets the direction. Systems make it possible. Execution turns it into progress." };
+export const metadata = pageMetadata("/approach");
 
 export default function ApproachPage() {
   return <>
+    <StructuredData path="/approach" />
     <PageIntro eyebrow="OUR APPROACH" title={"A plan is only as good\nas what happens next."} description="Strategy sets the direction. Systems make it possible. Execution turns it into progress." cobalt />
     {phases.map((phase, i) => <Section key={phase.number} tone={i === 1 ? "tint" : "chalk"} className="phase-detail" id={phase.title.toLowerCase()}>
       <Eyebrow>{phase.number} / {phase.title.toUpperCase()}</Eyebrow>

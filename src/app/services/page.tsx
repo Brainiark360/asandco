@@ -1,14 +1,16 @@
-import type { Metadata } from "next";
 import ApproachSection from "../../components/ApproachSection";
 import FinalCTASection from "../../components/FinalCTASection";
 import { ButtonLink, Eyebrow, Lines, PageIntro, Section, TextLink } from "../../components/ui";
 import { services } from "../../lib/site-data";
+import StructuredData from "../../components/StructuredData";
+import { pageMetadata } from "../../lib/seo";
 
-export const metadata: Metadata = { title: "Services", description: "Social media management, branding, consultancy, digital marketing, web and app development, photography, film, advertising, events and printing." };
+export const metadata = pageMetadata("/services");
 
 export default function ServicesPage() {
   return <>
-    <PageIntro eyebrow="OUR SERVICES" title={"A clearer path\nfrom ambition\nto growth."} description="From strategy and branding to social media, digital experiences and production. Choose a service to see how we can help.">
+    <StructuredData path="/services" />
+    <PageIntro eyebrow="OUR SERVICES" title={"A clearer path\nfrom ambition\nto growth."} description="Brand identity, social media management, digital marketing, web and app development, and creative production. Explore our services for businesses in Nigeria and beyond.">
       <nav id="services-index" className="service-shortcuts" aria-label="Explore our services">
         {services.map((service) => <a key={service.id} href={"#" + service.id}>{service.shortcut}</a>)}
       </nav>

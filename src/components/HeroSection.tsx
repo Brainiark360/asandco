@@ -7,7 +7,7 @@ export default function HeroSection() {
     <div className="hero-composition">
       <div className="hero-message">
         <h1 className="heading-display heading-enter"><Lines text={"Make your\nnext move\ncount."} /></h1>
-        <p className="hero-description">We bring clear strategy, disciplined marketing and the right technology together to move your business forward.</p>
+        <p className="hero-description">We bring brand strategy, social media management, digital marketing and web development together for businesses in Nigeria and beyond.</p>
         <div className="hero-actions"><ButtonLink inverse /><TextLink href="/services" light>Explore services</TextLink></div>
       </div>
       <div className="hero-sculpture">

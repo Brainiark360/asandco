@@ -5,9 +5,14 @@ import HeroSection from "../components/HeroSection";
 import ServicesSection from "../components/ServicesSection";
 import WorkSection from "../components/WorkSection";
 import { Eyebrow, Lines, Section, TextLink } from "../components/ui";
+import StructuredData from "../components/StructuredData";
+import { pageMetadata } from "../lib/seo";
+
+export const metadata = pageMetadata("/");
 
 export default function Home() {
   return <>
+    <StructuredData path="/" />
     <HeroSection />
     <ClientsSection />
     <ServicesSection />

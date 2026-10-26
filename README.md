@@ -56,3 +56,11 @@ The success design is at /contact/thank-you and is not indexed by search engines
 ## Accessibility and interaction
 
 One main landmark per page, semantic headings, visible keyboard focus, skip link, native modal focus trapping/Escape, accessible FAQ disclosures, labelled fields and inline validation. The navigation and all service shortcuts use real links. Static page content remains server-rendered; only navigation, enquiry handling and reveal enhancement need client JavaScript.
+
+## SEO
+
+Canonical host: https://alexanderstephen.com (the live www address redirects here). Nigeria is the primary market; additional regions are Africa, the United States and the United Kingdom. Search/share metadata, business and service JSON-LD, sitemap and crawler rules share the confirmed configuration in src/lib/seo.ts. Branded share/logo images are in public/seo/.
+
+Production builds are indexable. Development and Vercel previews/custom non-production environments are noindex; use SEO_NOINDEX=true for staging elsewhere. These flags and the optional public GOOGLE_SITE_VERIFICATION token are read at build time, so rebuild after changing them. Do not promote a preview artifact to production without rebuilding with production settings. The thank-you page is always noindex, and the sitemap includes only the five public pages.
+
+Run `node scripts/verify-seo.mjs http://localhost:3000` against a running production build. Use `--noindex` when checking a development/noindex server. This read-only check validates the actual crawler-facing HTML, sitemap, robots, success/404 pages, assets and trailing-slash redirects. See design/seo-plan.md for the content plan and Search Console/launch checklist. No external search account, DNS or hosting setting is changed by these files.

@@ -9,6 +9,7 @@ export default function Footer() {
         <div className="footer-proposition">
           <p className="heading-sm">Clarity that creates momentum.</p>
           <p>Strategy, marketing and digital systems for ambitious businesses.</p>
+          <p>Nigeria / Africa / United States / United Kingdom</p>
         </div>
         <div className="footer-links">
           <nav aria-label="Footer navigation"><Link href="/about">About</Link><span aria-hidden="true">/</span><Link href="/services">Services</Link><span aria-hidden="true">/</span><Link href="/approach">Approach</Link></nav>
